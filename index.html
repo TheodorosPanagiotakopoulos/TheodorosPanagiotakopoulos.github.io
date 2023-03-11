@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Theodoros E. Panagiotakopoulos</title>
+        <title>Theodoros Panagiotakopoulos</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
@@ -14,6 +14,15 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style>
+        .material-icons {vertical-align:-14%}
+        </style>
+        
+        
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -27,6 +36,11 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                     <ul>
+                        <li><a class="nav-link js-scroll-trigger" href="#AI_physics">AI & Physics</a></li>
+                        <li><a class="nav-link js-scroll-trigger" href="#AI_Statistics">AI & Statistiscs</a></li>
+                        <li><a class="nav-link js-scroll-trigger" href="#Teaching">Teaching</a></li>
+                    </ul>  
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mat_skills"> Material Science Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#data_science">Data Science Skills</a></li>
@@ -45,53 +59,60 @@
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
-                        Theodoros E.
+                        Theodoros
                         <span class="text-primary">Panagiotakopoulos</span>
                     </h1>
                         <p class="lead mb-5">
-                        10837 Heather Ridge Cir, Orlando FL, USA, +1 (321) 202-3216 ·
-                        <a href="mailto:name@email.com">teosfp@hotmail.com </a>
-                        </p>
+                        <i class="material-icons">home</i> 10837 Heather Ridge Cir, Orlando FL, USA
+                        <br>
+                        <i class="fa fa-phone"></i>  +1 (321) 202-3216
+                        <br>
+                        <i class="fa fa-envelope"></i><a href="mailto:Theodoros.Panagiotakopoulos@ucf.edu">Theodoros.Panagiotakopoulos@ucf.edu </a>,  
+                        <a href="mailto:teosfp@hotmail.com">teosfp@hotmail.com </a>
+                           
                     <p>
                     I am currently getting my PhD in computational physics from the University of Central Florida and more precisely I am evolved in machine learning with applications in nanotechnology and material science. I am passionate about coding with strong business understanding, I love diving into problems and extensively reaching all their different aspects. <br>
 
 <p>
-My field of research is the creation of neural network potentials for molecular dynamics and kinetic Monte Carlo simulations. I am skilled in quarantine analysis, Statistical Data Science, Computational Physics, Computational Modeling, Predictive Analytics and well trained in the field of neural networks such as deep learning and GANs. I also have big experience with time series analysis and forecasting by using AR, ARIMA and deep learning.<br> </p>
+My field of research is the creation of neural network potentials for molecular dynamics and kinetic Monte Carlo simulations. Apart from this, I am also working with the department of Statistics on the development of Graphical neural networks, where we  utilize flexible constraints to produce a smaller set of weights that help simplify the inference process and highlight important features for the users. I am skilled in quarantine analysis, Statistical Data Science, Computational Physics, Computational Modeling, Predictive Analytics and well trained in the field of neural networks such as deep learning and GANs. I also have big experience with time series analysis and forecasting by using AR, ARIMA and deep learning.<br> </p>
+
 
 Moreover, I am an experienced Teaching Assistant with a demonstrated history of working in the higher education industry and I have been teaching graduate and undergraduate courses at the University of Central Florida. I also have a Master's degree focused in computational physics from the National and Kapodistrian University of Athens.
                     </p>
                     <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/thodoris-panagiotakopoulos-2569561b0"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://www.linkedin.com/in/thodorispanagiotakopoulos-PhD"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/theodorosP/"><i class="fab fa-github"></i></a>
+                         <a class="social-icon" href="https://scholar.google.com/citations?user=K2MVU4kAAAAJ&hl=en"><i class="fab fa-google"></i></a>
                     </div>
                 </div>
             </section>                           
             <hr class="m-0" />
             <!-- Experience-->
             <section class="resume-section" id="experience">
+                <subsection class="resume-section" id="AI_physics">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Research and Teaching Assistant, University of Central Florida</h3>
-                            <div class="subheading mb-3">Neural Network Potentials developer</div>
+                            <div class="subheading mb-3">  Artificial Inteligence and Physics </div>
                             <p>
                                 <ul>
-                                    <li> Introduced a second generation neural-network representation that is several orders of magnitude faster than Density Functional Theory (DFT). This method, relies on local properties and is not taking into account global changes in the electronic structure. This representation gives the energy and forces as a function of all atomic positions in systems of any size. An atomic neural network uses the local chemical environment to determine each atom’s energy. A feed-forward neural network, in which information only passes in one direction toward the output layer, is the sort of neural network that is used for fitting energy. There are two layers: an input layer that feeds the network with the respective atomic positions and an output layer that holds the atomic potential energy. The regression is carried out by a number of intermediary hidden layers, with the number of layers and the number of neurons in each layer being empirically optimized for the particular application. </ul>  
+                                    <li> <b> Introduced a second generation neural-network representation that is several orders of magnitude faster than Density Functional Theory (DFT)</b>. This method, relies on local properties and is not taking into account global changes in the electronic structure. This representation gives the energy and forces as a function of all atomic positions in systems of any size. An atomic neural network uses the local chemical environment to determine each atom’s energy. A feed-forward neural network, in which information only passes in one direction toward the output layer, is the sort of neural network that is used for fitting energy. There are two layers: an input layer that feeds the network with the respective atomic positions and an output layer that holds the atomic potential energy. The regression is carried out by a number of intermediary hidden layers, with the number of layers and the number of neurons in each layer being empirically optimized for the particular application. </ul>  
                                 </p>
                             
                             <p>
                                 <ul>
-                                    <li>Introduced a fourth-generation high-dimensional neural network potential that combines a charge equilibration scheme employing environment-dependent atomic electronegativities with accurate atomic energies.The technique produces far better energies and significantly broadens the applicability of contemporary machine learning potentials since it can accurately characterize global charge distributions in arbitrary systems. Electronic structural calculations and the potential of fourth-generation neural networks accord quite well.</ul> 
+                                    <li> <b> Developed a general solution for the limitations of current machine learning potentials by introducing a fourth-generation Neural Network, which is applicable to long-range charge transfer and multiple charge states </b>. It consists of highly accurate short-range atomic energies similar to those used in second generation <b> neural networks</b> potentials and charges determined from a charge equilibration method relying on electronegativities. Both, the short-range atomic energies as well as the electronegativities are expressed by atomic <b> neural networks </b> as a function of the chemical environments. For all these systems we demonstrate that fourth generation <b>neural network </b> potentials trained to DFT data are able to provide reliable energies, forces and charges in excellent agreement with electronic structure calculations. We show that previous generations of <b> neural network </b> potentials, which are unable to take distant structural changes into account, yield inaccurate energies and forces, which are correctly resolved by this  <b> neural network </b> potential. These results apply to other types of machine learning potentials.</ul> 
                             </p>
                             <p>
                                 <ul>
-                                    <li>Developed innovative numerical methods and algorithms for chemical potential calculations of metal on semiconductor junctions. The model successfully predicts the formation of metallic clusters on the semiconductor surface, a result experimentally confirmed by scanning tunneling microscopy (STM) experiments at UC Davis. </ul>
+                                    <li> <b> Developed innovative numerical methods and algorithms for chemical potential calculations of metal on semiconductor junctions. </b> The model successfully predicts the formation of metallic clusters on the semiconductor surface, a result experimentally confirmed by scanning tunneling microscopy (STM) experiments at UC Davis. Moreover, the island areas grew linearly with time, exhibiting collective diffusion, and their total growth rate was inversely related to the temperature. Density Functional Theory simulations of the chemical potential and binding sites of the Pb/Ge(111) system were used to explain this nonclassical behavior of the system. </ul>
                             </p>
                 
                             <p>
                                 <ul>
-                                <li> Worked with Dr Talat Rahman and Dr Duy Le and Introduced a novel method to model the electrolyte at the electrochemical interface using initio simulations of charge transfer processes at surfaces. We presented a simple capacitor model of the interface that illuminates how to circumvent i) required large cell heights to reach convergence, which is a serious computational cost ii) the costly iterations calculations of reaction energetics to tune the surface charge to the desired potential. We derived a correction to the energy for finite cell heights to obtain the large cell energies at no additional computational expense. We furthermore demonstrated that the reaction energetics determined at constant charge are easily mapped to those at constant potential, which eliminates the need to apply iterative schemes to tune the system to a constant potential.    
+                                    <li> <b> Introduced a novel method to model the electrolyte at the electrochemical interface using initio simulations of charge transfer processes at surfaces. </b> We presented a simple capacitor model of the interface that illuminates how to circumvent i) required large cell heights to reach convergence, <b> which is a serious computational cost </b> ii) the costly iterations calculations of reaction energetics to tune the surface charge to the desired potential. We derived a correction to the energy for finite cell heights to obtain the large cell energies at no additional computational expense. We furthermore demonstrated that the reaction energetics determined at constant charge are easily mapped to those at constant potential, which eliminates the need to apply iterative schemes to tune the system to a constant potential.    
                                 </ul>
                             </p>
                             <p>
@@ -103,14 +124,21 @@ Moreover, I am an experienced Teaching Assistant with a demonstrated history of 
                             <p>
                                 <ul>
                                     <li>
-                                        Recently started coaching and supervising new coming graduate students to acclimate themselves within the group and execute their research project. Provided computational help, assisted with class selection discussed with the advisor and group senior scientists about their research future steps.
+                                        <b> Assist with compiling, debugging and optimization, of codes used in computational Material Science such as VASP, VASPsol and Quantum Espresso. </b> Perform, analyse and summarize validation simulations on <b> high-performance computer (HPC) </b> systems running <b>Linux.</b>. Assist in the <b> implementation, development, and improvement of application software and methods</b> that can be utilized in <b>analyzing and interpreting data </b> in the physical sciences. <b> Four years active development of codes used in HPC </b> 
                                 </ul>
                             </p>
                             <p>
                                 <ul>
-                                    <li> Instructor of introductory Physics 1 and 2. Graduate and undergraduate electromagnetism and quantum mechanics. Leadership and mentorship and instruction. Authored manual with exercises and solution for electromagnetism class. Recorded lectures and homework recitations for home and self study. Spearheaded review sessions and one to one consultations before the exams for struggling students.None of my students failed his exam.
-                                </ul>
+                                    <li> <b> Recently started coaching  and supervising new coming graduate students to acclimate themselves within the group and execute their research project. </b> Provided <b>computational </b> help, assisted with class selection  discussed with the advisor and group senior scientists about their research future steps. Keep abreast of new developments in <b> Computation Material Science </b> and be pro-active in introducing them to new graduate students. Help senior scientists with grant proposals by contributing sections of the proposal that describe the interplay between their research and <b> high-end computing resources. </b> </ul>
+                                <ul>
+                                    <li> Studied and reported the effect of creating an interface between a semiconducting polyaniline polymer or a polar poly-D-lysine molecular film and one of two valence tautomeric complexes, i.e., [CoIII(SQ)(Cat)(4-CN-py)2] ↔ [CoII(SQ)2(4-CN-py)2] and [CoIII(SQ)(Cat)(3-tpp)2] ↔ [CoII(SQ)2(3-tpp)2]. The electronic transitions and orbitals are identified using X-ray photoemission, X-ray absorption, inverse photoemission, and optical absorption spectroscopy measurements that are guided by density functional theory. Except for slightly modified binding energies and shifted orbital levels, the choice of the underlying substrate layer has little effect on the electronic structure. A prominent unoccupied ligand-to-metal charge transfer state exists in [CoIII(SQ)(Cat)(3-tpp)2] ↔ [CoII(SQ)2(3-tpp)2] that is virtually insensitive to the interface between the polymer and tautomeric complexes in the Co(II) high-spin state  </ul>
                             </p>
+                             <subsection class="resume-section" id="Teaching">
+                            <div class="subheading mb-3">  Teaching </div>
+                              <ul>
+                                  <li> <b>Instructor of introductory Physics 1 and 2.</b>  Graduate and undergraduate electromagnetism and quantum mechanics. Design tutorials, and documentation for students in STEM field with the help and coordination of other university staff. <b>Leadership and mentorship </b> and instruction. <b>Authored manual with exercises and solution </b> for electromagnetism class. Recorded lectures and homework recitations for home and self study. Spearheaded review sessions and one to one consultations before the exams for struggling students. None of my students failed his exam.  </ul>
+                            </p>
+
 
                        
                        
@@ -242,6 +270,12 @@ Moreover, I am an experienced Teaching Assistant with a demonstrated history of 
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                             Python
+                        
+                         </p>
+                         <p>
+                             <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Julia 
                         
                          </p>
                          <p>
@@ -398,7 +432,15 @@ Moreover, I am an experienced Teaching Assistant with a demonstrated history of 
             <!-- Skills-->
             <section class="resume-section" id="publications">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Publications</h2>
+                    <h2 class="mb-5">Publications</h2>  
+                    <p>   
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                              <a href=" https://www.mdpi.com/2227-7390/10/18/3323" target="_blank">Exploring Simulated Residential Spending Dynamics in Relation to Income Equality with the Entropy Trace of the Schelling Model </a> 
+                        </p>
+                        <p>   
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                              <a href=" https://pubs.rsc.org/en/content/articlehtml/2023/nr/d2nr06834f" target="_blank">Electronic structure of cobalt valence tautomeric molecules in different environments </a> 
+                        </p>
                         <p>   
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                               <a href="https://pergamos.lib.uoa.gr/uoa/dl/object/2878471" target="_blank">Direct and indirect detection of dark matter</a> 
