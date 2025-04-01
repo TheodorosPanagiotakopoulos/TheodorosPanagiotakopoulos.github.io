@@ -253,11 +253,20 @@ Overall, my results show that the <b>identity of the cation plays a critical rol
                 
                             <p>
 								<ul>
-  <li><b>I investigated the cation effect using small quaternary ammonium cations with different sizes and symmetries.</b> For Bi-catalyzed CO<sub>2</sub> Reduction Reaction (CO<sub>2</sub>RR), which produces CO and formate, I performed density functional theory (DFT) calculations and ab initio molecular dynamics (AIMD) simulations to examine the effect of asymmetric cations (such as CH<sub>3</sub>NH<sub>3</sub><sup>+</sup>) on CO<sub>2</sub> adsorption and activation.
+  <li><p>
+This project investigates key challenges in sustainable electrochemistry, focusing on how electrolyte composition, particularly the nature of cations, influences the electrochemical reduction of carbon dioxide (CO₂RR). My work centered on <strong>Bi(111)</strong>, a promising catalyst for CO₂ conversion, and how <strong>non-metal cations affect CO₂ adsorption and product formation</strong>. The aim was to understand the mechanistic role of these cations and determine how they modulate binding energies, activation barriers, and reaction pathways that govern the generation of <strong>CO and formate</strong>.
 
-  My findings were supported by experimental studies, which confirmed that asymmetric cations have a stronger promotional effect on CO<sub>2</sub>RR activity compared to symmetric ones. This effect is attributed to the asymmetric and weak hydration shell that stabilizes adsorbed CO<sub>2</sub>. Additionally, by comparing cations of different sizes (NH<sub>4</sub><sup>+</sup>, Me<sub>4</sub>N<sup>+</sup>, and Et<sub>4</sub>N<sup>+</sup>), I observed a significant effect of cation size on CO production activity, with negligible impact on formate production.
+To pursue this, I designed and conducted a series of high-fidelity simulations using <strong>grand canonical density functional theory (GC-DFT)</strong>. I employed the TPOT package alongside VASP and VASPSol, which allowed me to maintain fixed electrode potentials by dynamically optimizing the system's electron count. This method was essential for accurately capturing the electrochemical environment and isolating potential-dependent phenomena in a controlled and reproducible manner.
 
-  My work further elucidated the critical effects of cation symmetry and size on CO<sub>2</sub>RR and proposed a method to improve electrocatalysis through optimized electrolytes. <b>This research led to the publication of a paper.</b></li>
+I systematically explored a range of non-metallic cations—<strong>NH₄⁺, CH₃NH₃⁺, and (CH₃)₄N⁺</strong>—and benchmarked them against a conventional metallic cation, <strong>Na⁺</strong>. Through detailed GC-DFT calculations, I evaluated CO₂ binding energies and found that <strong>non-metal cations significantly enhanced CO₂ adsorption</strong> by up to 0.2 eV compared to Na⁺. This enhancement was attributed to <strong>stronger electrostatic interactions and more favorable charge transfer</strong> characteristics at the Bi–CO₂ interface.
+
+In addition, I mapped the full reaction landscape for CO₂ reduction, from initial adsorption to the formation of <strong>CO and HCOO⁻</strong>. The study revealed that formate can be produced via two distinct pathways—direct hydrogenation of solvated CO₂, or surface adsorption followed by hydrogenation. The former pathway emerged as <strong>energetically preferred and largely independent of the cation</strong>, while <strong>CO formation was more sensitive to cation identity and hydration dynamics</strong>.
+
+To explore the role of water and proton availability, I carried out <strong>nudged elastic band (NEB) calculations</strong> for water dissociation and hydrogen shuttling, revealing <strong>activation barriers of 1.10–1.12 eV</strong> for Na⁺ and NH₄⁺. These steps are critical in delivering reactive hydrogen species to CO₂, enabling the formation of intermediates such as COOH* and ultimately CO. The results showed that <strong>NH₄⁺ uniquely stabilizes these intermediates</strong> through hydrogen bonding, which contributes to lower desorption barriers and improved CO₂RR activity.
+
+This work presents a <strong>comprehensive model of how non-metal cations interact with both the electrode and reaction intermediates</strong>. The study demonstrated that <strong>non-metal cations often outperform metal cations</strong> by enhancing CO₂ adsorption and improving the energetics of downstream transformations. These insights offer practical guidance for the <strong>design of next-generation electrolytes and catalytic interfaces</strong> aimed at carbon-neutral fuel synthesis.
+
+Overall, this research illustrates how <strong>grand canonical DFT, combined with mechanistic insight and electrochemical understanding</strong>, can bridge the gap between atomic-scale theory and experimentally observable behavior. The findings have supported key experimental collaborations and helped secure <strong>Department of Energy funding</strong>, while laying a strong foundation for <strong>future data-driven modeling of electrochemical interfaces</strong>.
 </ul>
 
                             </p>
@@ -667,26 +676,23 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                              
                              
                              
-</section>
-<hr class="m-0" />
-<section class="resume-section" id="awards">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Awards and Fellowships</h2>
-
-        <div class="flex-shrink-0"><span class="text-primary">Summer 2019 - Present </span></div>
-        <p>   
-            <span class="fa-li"><i class="fas fa-check"></i></span>
-            Research & Teaching Assistant Fellowship
-        </p> 
-
-        <div class="flex-shrink-0"><span class="text-primary">Spring 2022 </span></div>
-        <p>   
-            <span class="fa-li"><i class="fas fa-check"></i></span>
-            Peer Tutoring Award
-        </p> 
-    </div>
-</section>
-
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards and Fellowships</h2>
+                    <div class="flex-shrink-0"><span class="text-primary">Spring 2022 </span></div>
+                        <p>   
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Peer Tutoring Award
+                        </p> 
+                         <div class="flex-shrink-0"><span class="text-primary">Summer 2019 - Present </span></div>
+                        <p>   
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Research & Teaching Assistant Fellowship
+                        </p> 
+                </div>
                              
                              
             
@@ -751,7 +757,13 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                  <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p> As a Modeling Engineer with a Ph.D. and a lifelong passion for technology, I bring a unique combination of analytical depth and creative innovation to every project I undertake. By day, I develop and optimize complex models to solve real-world challenges; by night, I explore the ever-evolving landscape of technology, continually expanding my skills and perspectives. </p> <p> With a strong foundation in coding and software development, I find both challenge and inspiration in building modern, efficient, and user-focused digital solutions. My interests span front-end technologies, web development frameworks, and emerging tech trends—all driven by a commitment to continuous learning and excellence. </p> <p> Beyond my professional work, I actively engage in personal projects that reflect my curiosity and passion for problem-solving. From exploring new programming languages to designing intuitive user experiences, I see technology not just as a profession, but as an integral part of who I am. </p> <p> Whether I’m contributing to innovative research, developing impactful software, or mentoring others in the field, my mission remains the same: to create, innovate, and lead with purpose in the dynamic world of technology. </p>
+                    <p>A data scientist by day and a passionate geek by night, I seamlessly blend my deep-rooted love for technology with my unwavering dedication to exploration and innovation. The intricate world of coding serves as my sanctuary, where I not only find solace and rejuvenation but also unleash my boundless creativity.</p>
+
+<p>Immersed in this digital realm, I constantly seek out the latest web development frameworks, eager to push the boundaries of front-end technology. Whether it's crafting groundbreaking projects or delving into the ever-evolving landscape of coding, my Ph.D.-backed expertise fuels my insatiable passion for technological advancement.</p>
+
+<p>My geeky pursuits extend far beyond the confines of my professional role, manifesting in a multifaceted blend of hobbies that mirror the vibrant tapestry of my exhilarating lifestyle. Technology serves as the unifying thread weaving through these diverse interests, creating a harmonious symphony of innovation and enjoyment.</p>
+
+<p>In my downtime, I relish the challenge of solving complex coding puzzles, delight in deciphering the intricacies of new programming languages, and revel in the thrill of creating groundbreaking digital masterpieces. My passion for technology is not merely a profession; it's an integral part of my identity, a driving force that propels me towards continuous learning and growth.</p>
                 </div>
                 
  </section>
@@ -760,17 +772,13 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
             <section class="resume-section" id="publications">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Selected Publications</h2>  
-			<p>   
+                    <p>   
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                              <a href=" https://pubs.acs.org/doi/full/10.1021/acscatal.5c00077" target="_blank">Effect of Ammonium-Based Cations on CO2 Electroreduction</a> 
+                              <a href=" https://www.mdpi.com/2227-7390/10/18/3323" target="_blank">Exploring Simulated Residential Spending Dynamics in Relation to Income Equality with the Entropy Trace of the Schelling Model </a> 
                         </p>
                         <p>   
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                               <a href=" https://pubs.rsc.org/en/content/articlehtml/2023/nr/d2nr06834f" target="_blank">Electronic structure of cobalt valence tautomeric molecules in different environments </a> 
-                        </p>
-			<p>   
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                              <a href=" https://www.mdpi.com/2227-7390/10/18/3323" target="_blank">Exploring Simulated Residential Spending Dynamics in Relation to Income Equality with the Entropy Trace of the Schelling Model </a> 
                         </p>
                         <p>   
                             <span class="fa-li"><i class="fas fa-check"></i></span>
