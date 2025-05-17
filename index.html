@@ -408,6 +408,34 @@ Overall, this research illustrates how <strong>grand canonical DFT, combined wit
                             </p>
                             <div> Computational Physics </div>
                             <p>GPA: 4/4 
+								<p>
+This thesis develops a unified computational framework that integrates <strong>first-principles modeling</strong> with <strong>machine learning</strong> to address complex, multi-scale problems in <strong>energy conversion</strong>, <strong>materials growth</strong>, and <strong>graph-structured data</strong>. A central challenge across these domains is to extract reliable predictions from <strong>incomplete or computationally intensive datasets</strong> and apply them to <strong>larger, realistic systems</strong>. The research focuses on combining physical insight with scalable learning architectures to model atomic-level interactions, thin film growth, and data-limited environments.
+</p>
+
+<p>
+The work begins with an investigation into <strong>thin film nucleation in metal-semiconductor systems</strong>, specifically the epitaxial growth of <strong>Pb on Ge(111)</strong>. High-accuracy <strong>DFT+U+J</strong> calculations revealed a critical nucleation threshold at <strong>1.33 monolayers</strong>, beyond which island formation becomes energetically favorable. To extend this understanding to non-periodic, large-scale systems, a <strong>two-stage machine learning surrogate model</strong> was developed. One neural network predicted <strong>atomic charges</strong>, while another estimated <strong>total system energies</strong>, achieving results consistent with DFT and enabling efficient exploration of alloy deposition conditions.
+</p>
+
+<p>
+To visualize the structural outcomes of deposition, a <strong>3D convolutional neural network (CNN)</strong> was constructed to predict relaxed atomic positions from initial configurations. Using <strong>voxelized tensors</strong> encoding atom types, charges, and electrostatic potentials, the CNN learned spatial relationships governing final morphology. The model generated atomistic structures nearly indistinguishable from DFT-relaxed geometries, offering a <strong>fast, scalable alternative</strong> for simulating complex deposition processes.
+</p>
+
+<p>
+Following this, the thesis explores how data from <strong>first-principles simulations</strong> can be further abstracted into <strong>graph representations</strong> to enable analysis under <strong>sparse conditions</strong>. In collaboration with the Departments of Physics and Statistics, a methodology was developed to encode atomic configurations or simulation domains as <strong>graphs</strong>, allowing truncated or reduced-node simulations. Using <strong>Simplified Graph Convolutional Networks (SGCs)</strong> implemented in Julia, the project introduced three node-reduction strategies and a <strong>parameter averaging technique</strong> to enhance robustness across sparsely observed graphs. Applied back to the full systems, this ensemble approach increased node classification accuracy from <strong>91% to 94%</strong>. Validated on the <strong>Cora citation network</strong> and <strong>Barabási–Albert synthetic graphs</strong>, the method demonstrated strong generalization performance and parallels the scalability challenges encountered in quantum modeling.
+</p>
+
+<p>
+The final section turns to <strong>sustainable electrochemical systems</strong>, focusing on the <strong>CO₂ reduction reaction (CO₂RR)</strong> and <strong>hydrogen evolution reaction (HER)</strong>. To simulate these reactions under constant electrode potential, two key tools were developed: a hybrid solvation model (<strong>SOLHYBRID</strong>) and a potential control algorithm (<strong>TPOT</strong>). These enabled <strong>grand-canonical DFT</strong> and <strong>AIMD</strong> simulations that uncovered how <strong>non-metallic ammonium cations</strong> like <strong>CH₃NH₃⁺</strong> enhance CO₂ adsorption and reduce the activation barrier for <strong>H* formation</strong> on <strong>bismuth electrodes</strong>. Experimental validation using <strong>H-cell</strong> and <strong>gas-diffusion electrodes (GDEs)</strong> confirmed that CH₃NH₃⁺ achieves <strong>nearly double the current density</strong> compared to Na⁺.
+</p>
+
+<p>
+Simulations of <strong>HER on Au(111)</strong> surfaces revealed novel <strong>cation-mediated mechanisms</strong>, including <strong>proton shuttling</strong> and <strong>direct proton donation</strong>, that are inaccessible to traditional metallic cations. These pathways reduce energy barriers and establish ammonium-based species as <strong>active co-catalysts</strong> in electrochemical reactions.
+</p>
+
+<p>
+Together, these studies demonstrate how <strong>machine learning can extend the reach of first-principles simulations</strong>, from predicting atomic configurations to learning from incomplete data. By unifying techniques across <strong>surface science</strong>, <strong>electrochemistry</strong>, and <strong>graph theory</strong>, this work provides scalable, physically grounded models that support the design of next-generation materials, interfaces, and sustainable energy technologies.
+</p>
+
                             </p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">August 2019 - Present </span></div>
