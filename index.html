@@ -176,7 +176,18 @@
                           </p>
                      </li>
                  </ul>
-
+              
+             
+               <ul>
+                   <li>
+                       <p>
+                           I developed a <strong>deep learning framework</strong> to evaluate the similarity of <strong>lithography simulation images</strong> using <strong>triplet learning</strong>. The method is based on training a <strong>convolutional neural network (ResNet18)</strong> to project images into a compact embedding space where structurally similar patterns are mapped close together while dissimilar patterns are pushed apart. I applied preprocessing transformations such as <strong>resizing</strong>, <strong>grayscale conversion</strong>, <strong>normalization</strong>, and <strong>tensor conversion</strong> to ensure consistent input representation. To improve training efficiency, I generated <strong>hard triplets</strong>, where the anchor and positive samples come from the same pattern group and the negative sample is deliberately chosen from a visually similar but different group, forcing the network to learn subtle discriminative features. <strong>Cosine similarity</strong> was used in the embedding space because it captures structural similarity independent of intensity scaling, which is particularly important in lithography where pattern fidelity must be measured beyond raw pixel brightness. The framework automatically organizes simulation data into <strong>training and validation sets</strong>, applies <strong>early stopping</strong> during optimization, and extracts embeddings for each group of patterns. After training, I computed both <strong>pairwise</strong> and <strong>average cosine similarities</strong> between groups and exported the results into structured <strong>CSV files</strong> for further analysis. These embeddings can also be used for <strong>clustering</strong>, <strong>anomaly detection</strong>, and <strong>model validation</strong>, extending the framework beyond similarity measurement and enabling broader applications in <strong>ASML’s lithography workflows</strong>.
+                       </p>
+                   </li>
+               </ul>
+   
+              
+                           
                 <ul>
                    <li> <p>I worked with the <strong>Tachyon software</strong> and studied <strong>geometrical corner rounding</strong>. I personally designed <strong>FEM+ simulations</strong> and calculated the total run time, memory usage, and grid dependence. By performing a runtime breakdown, I was able to calculate the corner rounding run time, the render area and render edge time, as well as the EM3D time. For the contour-to-contour difference, I designed <strong>LMC+ simulations</strong> and used the <strong>MPC</strong> layer as the golden rule for my comparison. After discussing the results with <strong>R&D</strong>, this update was included in the latest Tachyon release and introduced to one of our biggest customers. I found that by using an updated geometrical corner rounding value, we could reduce significantly the computational time and corresponding memory usage by. I wrote my own Python and C++ code to extract data from large datasets, transformed them into libraries, and shared them with the company, where they were adopted by the product engineering group. Additionally, I <strong>identified</strong> a <strong>bug</strong> in the <strong>Tachyon software</strong> that was causing asymmetric jogs after applying the geometrical corner rounding algorithm. I proposed a solution to the research and development team, which they subsequently adopted.</p> </ul> 
                 
