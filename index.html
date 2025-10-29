@@ -257,7 +257,45 @@ I initiated a collaboration between the Department of Physics and the Department
  </p>
                              <subsection class="resume-section" id="Modeling and Computational Science">
                             <div class="subheading mb-3">  Data Modeling and Simulations, DOE Grant </div>
-                             
+
+
+
+
+
+
+								   <p>
+    During my Ph.D., I designed and built a <strong>Density Functional Theory (DFT) simulation package</strong> entirely from scratch in <strong>C++</strong>. 
+    The core of the project centered on implementing a <strong>numerical solver for the Kohn–Sham equations</strong>. 
+    To achieve this, I discretized the system on a <strong>finite difference grid</strong>, using <strong>Eigen</strong> to construct the sparse Hamiltonian matrix and <strong>ARPACK++</strong> to solve the resulting eigenvalue problem within a self-consistent field (SCF) loop.
+  </p>
+
+  <p>
+    Beyond the solver, I placed strong emphasis on <strong>software engineering and code quality</strong>. 
+    The system was designed to be <strong>highly modular</strong>, promoting maintainability and extensibility. 
+    I leveraged <strong>Boost</strong> libraries extensively—using <strong>Boost.Units</strong> to enforce physical correctness at compile time and <strong>Boost.Math</strong> for its robust, numerically stable special functions.
+  </p>
+
+  <p>
+    To ensure <strong>high performance and scalability</strong>, I implemented a <strong>multi-layered parallelism strategy</strong>:
+  </p>
+
+  <ul>
+    <li><strong>Kokkos</strong> for performance portability across CPUs and GPUs.</li>
+    <li><strong>Intel TBB (Threading Building Blocks)</strong> for high-level, data-parallel workloads on multi-core CPUs.</li>
+    <li><strong>C++ standard library concurrency</strong> (<code>std::thread</code> and <code>std::async</code>) for fundamental parallel tasks.</li>
+  </ul>
+
+  <p>
+    The result was a <strong>robust, modular, and performance-portable simulation framework</strong> that combined cutting-edge numerical methods with modern C++ design principles.
+  </p>
+
+
+
+
+
+
+
+								 
                             <p>
 								<ul>
   <li><b>I introduced a novel method to model the electrolyte at the electrochemical interface using ab initio simulations of charge transfer processes at surfaces.</b> I presented a simple capacitor model of the interface that addresses key challenges, including: i) the requirement for large cell heights to achieve convergence, <b>which incurs significant computational costs</b>, and ii) the costly iterative calculations of reaction energetics needed to tune the surface charge to the desired potential. 
