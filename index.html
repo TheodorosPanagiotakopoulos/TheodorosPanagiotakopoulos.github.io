@@ -262,34 +262,19 @@ I initiated a collaboration between the Department of Physics and the Department
 
 
 
-
-								   <p>
-    During my Ph.D., I designed and built a <strong>Density Functional Theory (DFT) simulation package</strong> entirely from scratch in <strong>C++</strong>. 
-    The core of the project centered on implementing a <strong>numerical solver for the Kohn–Sham equations</strong>. 
-    To achieve this, I discretized the system on a <strong>finite difference grid</strong>, using <strong>Eigen</strong> to construct the sparse Hamiltonian matrix and <strong>ARPACK++</strong> to solve the resulting eigenvalue problem within a self-consistent field (SCF) loop.
-  </p>
-
-  <p>
-    Beyond the solver, I placed strong emphasis on <strong>software engineering and code quality</strong>. 
-    The system was designed to be <strong>highly modular</strong>, promoting maintainability and extensibility. 
-    I leveraged <strong>Boost</strong> libraries extensively—using <strong>Boost.Units</strong> to enforce physical correctness at compile time and <strong>Boost.Math</strong> for its robust, numerically stable special functions.
-  </p>
-
-  <p>
-    To ensure <strong>high performance and scalability</strong>, I implemented a <strong>multi-layered parallelism strategy</strong>:
-  </p>
-
+<p>
   <ul>
-    <li><strong>Kokkos</strong> for performance portability across CPUs and GPUs.</li>
-    <li><strong>Intel TBB (Threading Building Blocks)</strong> for high-level, data-parallel workloads on multi-core CPUs.</li>
-    <li><strong>C++ standard library concurrency</strong> (<code>std::thread</code> and <code>std::async</code>) for fundamental parallel tasks.</li>
+    <li>
+      <b>I designed and implemented a Density Functional Theory (DFT) simulation package from scratch in C++ to solve the Kohn–Sham equations numerically.</b> The system was discretized on a finite difference grid, using <b>Eigen</b> to construct the sparse Hamiltonian and <b>ARPACK++</b> to solve the resulting eigenvalue problem within a self-consistent field (SCF) loop. 
+
+      I engineered the codebase to be <b>highly modular and robust</b>, emphasizing clean software design and physical correctness. Extensive use of <b>Boost</b> libraries enhanced both safety and precision: <b>Boost.Units</b> enforced dimensional consistency at compile time, while <b>Boost.Math</b> provided numerically stable special functions essential for accurate energy and potential calculations. 
+
+      To ensure <b>high performance and scalability</b>, I implemented a <b>multi-layered parallelism strategy</b>: <b>Kokkos</b> for performance portability across CPUs and GPUs, <b>TBB</b> for high-level data-parallel operations, and standard C++ concurrency (<code>std::thread</code>, <code>std::async</code>) for fine-grained parallel tasks. 
+
+      This work resulted in a <b>modular, performance-portable, and physically rigorous DFT framework</b> capable of large-scale electronic structure simulations with modern C++ design principles.
+    </li>
   </ul>
-
-  <p>
-    The result was a <strong>robust, modular, and performance-portable simulation framework</strong> that combined cutting-edge numerical methods with modern C++ design principles.
-  </p>
-
-
+</p>
 
 
 
