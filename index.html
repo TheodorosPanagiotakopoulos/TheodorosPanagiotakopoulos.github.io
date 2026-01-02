@@ -111,45 +111,33 @@
                          download="Theodoros_Panagiotakopoulos.pdf">Download Resume</a>    
                          
 <p>
-    Hi, I’m <strong>Theodoros Panagiotakopoulos</strong>, a <strong>Ph.D. physicist</strong> and <strong>computational modeling engineer</strong> with deep expertise in <strong>materials design</strong>, <strong>machine learning</strong>, and <strong>scientific software development</strong>. My work focuses on accelerating discovery in <strong>semiconductor fabrication</strong>, <strong>electrochemical systems</strong>, and <strong>nanotechnology</strong> by combining physics-based simulations with modern AI tools.
-  </p>
-
-  <p>
-    At the <strong>University of Central Florida</strong>, my Ph.D. research centers on building <strong>Machine Learning Pipelines</strong> and simulation frameworks to predict complex material behaviors with high accuracy and efficiency. I have developed <strong>deep learning models</strong> that outperform traditional DFT in speed, including <strong>convolutional neural networks trained on 3D voxel data</strong> to model metal-semiconductor deposition morphology. I have also built <strong>end-to-end pipelines</strong> for predicting atomic charge distribution, total energy, and final deposition structures, allowing scalable analysis for real-world systems.
-  </p>
-
-  <p>
-    During my internship at <strong>ASML</strong>, I worked on next-generation <strong>computational lithography tools</strong>. I optimized <strong>FEM+</strong> and <strong>LMC+</strong> simulations within Tachyon, reducing <strong>memory usage by 34%</strong> and <strong>rounding runtime by 70%</strong>. My proposed simulation parameters produced more accurate contours, outperformed baseline values, and were integrated into <strong>ASML's latest release</strong>, now used by major customers. I also led a project to optimize <strong>Transition Cross Coefficients</strong> using <strong>M3D simulations</strong>, improving performance across mask types and numerical apertures.
-  </p>
-
-  <p>
-    In parallel with my research, I have developed <strong>voltage control algorithms</strong> in VASP for electrochemical simulations, calculated <strong>grand canonical energies</strong> for CO₂ reduction, and identified new mechanisms such as <strong>proton shuttling</strong>. My work contributes to understanding and improving the efficiency of <strong>catalytic reactions for sustainable energy applications</strong>.
-  </p>
-
-  <p>
-    I have collaborated with the Department of Statistics to build <strong>Graph Neural Networks (GNNs)</strong> that extract critical features from complex materials datasets, helping accelerate simulation workflows and improve decision-making in <strong>research and development environments</strong>.
-  </p>
-
-<p>
-  Beyond individual research contributions, I have created three scientific software libraries: 
-  <strong>one for designing and modeling advanced materials systems</strong>, 
-  <strong>one for simulating and analyzing electrochemical processes</strong>, and 
-  <strong>one for rendering and visualizing 3D simulated data as high-quality 2D images suitable for publications</strong>. 
-  Since I am <strong>committed to building reusable, scalable infrastructure for computational science</strong>, 
-  I developed these tools to support <strong>advanced research and accelerate discovery</strong> across disciplines.
+Hi, I am <b>Theodoros Panagiotakopoulos</b>, a <b>PhD physicist</b> and <b>applied machine learning</b> engineer focused on turning scientific problems into <b>scalable data products</b>. My work sits at the intersection of <b>data science</b>, <b>physics based modeling</b>, and <b>high performance software</b>, with an emphasis on building pipelines that are reliable under real constraints and produce outputs that are easy to validate, compare, and deploy.
 </p>
 
-  <p>
-    My technical toolkit spans <strong>Python</strong>, <strong>C++</strong>, <strong>Julia</strong>, <strong>SQL</strong>, and <strong>HPC environments</strong>, and includes deep experience with <strong>TensorFlow</strong>, <strong>PyTorch</strong>, <strong>VASP</strong>, and <strong>custom scientific software libraries</strong>. I bring a multifaceted skill set to every project, combining <strong>computational physics</strong>, <strong>advanced modeling</strong>, <strong>data engineering</strong>, and <strong>AI</strong>.
-  </p>
+<p>
+At <b>ASML</b>, I built a <b>terabyte scale data processing and visualization framework</b> to evaluate machine learning optics models against rigorous simulation at production scale. Because the production optimizer does not evaluate on validation data during training, I designed an independent checkpoint evaluation pipeline that loads intermediate artifacts, aligns them with reference outputs, applies scenario specific EUV and DUV sanity filters to reject unphysical values, and computes physically meaningful error metrics with <b>aerial image RMSE</b> as the primary signal. I structured analysis across the true sources of variation in the dataset including <b>slits</b>, <b>groups</b>, and <b>queueTags</b>, producing compact summary tables that expose overfitting and failure modes rather than hiding them in averages. I engineered the system for real workload bottlenecks by parallelizing I O heavy ingestion with <b>ThreadPoolExecutor</b>, accelerating compute heavy stages with <b>ProcessPoolExecutor</b>, and scaling the largest aggregations with <b>Dask</b> to avoid memory limits while preserving a pandas style workflow. The result reduced analysis time by roughly <b>80%</b>, enabled routine large scale validation, and became a standard tool for ML and simulation experiments because it made model quality measurable, comparable, and difficult to misinterpret.
+</p>
 
-  <p>
-    I hold a <strong>master's degree in physics</strong> from the <strong>National and Kapodistrian University of Athens</strong>, where I applied deep learning techniques to problems in <strong>particle physics</strong>, including <strong>supersymmetry</strong> and <strong>dark matter detection</strong>. I have also served as a <strong>teaching assistant</strong> in both undergraduate and graduate courses, helping students explore the intersection of physics, computation, and data science.
-  </p>
+<p>
+In parallel, I developed deep learning methods for representation learning in lithography. I built a <b>triplet learning</b> framework that replaces pixel level comparisons with a compact <b>embedding space</b> trained to capture pattern structure. The pipeline includes consistent preprocessing, automated train validation partitioning, early stopping, and hard triplet mining with cosine similarity scoring, and it exports structured similarity tables for downstream reporting. To improve generalization under imbalance across pattern groups, I trained a <b>U Net denoising diffusion model</b> to synthesize minority class lithography images and integrated the generated samples into the same triplet construction workflow, improving validation stability and the reliability of similarity rankings.
+</p>
 
-  <p>
-    Whether you're building advanced simulation tools, developing ML models for materials discovery, or optimizing scientific software pipelines, I’m ready to collaborate and help move your technology forward.
-  </p>                     </p>
+<p>
+In my <b>PhD research</b> at the <b>University of Central Florida</b>, I build machine learning pipelines that reproduce expensive materials simulations while remaining stable on the hardest regimes. I delivered an end to end workflow to predict <b>Pb on Ge111</b> deposition morphology by learning local atomic relaxation as a displacement vector in <b>three dimensions</b>. A 2D CNN baseline revealed a long tail failure mode concentrated at island edges and steps, so I redesigned the representation and implemented a <b>3D voxel CNN</b> that predicts <b>&Delta;x</b>, <b>&Delta;y</b>, <b>&Delta;z</b> from <b>10 &times; 10 &times; 10 &times; 6</b> neighborhood tensors. I engineered a sliding window inference system with overlap aware averaging so a fixed input network scales to large surfaces, and I built a distributed <b>PySpark</b> pipeline to convert more than <b>10K</b> atomic configurations into more than <b>600K</b> voxel tensors for high throughput training. To reduce the long tail errors driven by rare edge and step environments, I trained a <b>3D U Net denoising diffusion model</b> to synthesize under represented voxel neighborhoods for augmentation, improving generalization and validation stability. I also implemented a <b>3D Vision Transformer</b> as a controlled comparison and found it less reliable in localized edge dominated regimes and substantially more expensive at inference time, reinforcing convolutional architectures for scalable deployment.
+</p>
+
+<p>
+I also build physics anchored machine learning systems where correctness matters. I developed a <b>physics informed neural network</b> for electromagnetics that solves the two dimensional Helmholtz equation by minimizing the PDE residual and enforcing the Sommerfeld radiation condition, using a <b>SIREN</b> representation to model highly oscillatory fields. In electrochemistry, I implemented voltage controlled simulation workflows and used grand canonical DFT style modeling to study reaction energetics and identify mechanisms such as proton shuttling in hydrogen evolution and cation dependent behavior in CO<sub>2</sub> reduction. Across these projects, the consistent theme is disciplined modeling, careful validation, and engineering systems that scale.
+</p>
+
+<p>
+My technical toolkit includes <b>Python</b>, <b>C++</b>, <b>Julia</b>, <b>SQL</b>, and <b>HPC</b> environments, with experience in <b>PyTorch</b>, <b>TensorFlow</b>, distributed data processing, and production grade scientific software. I am interested in roles in <b>data science</b>, <b>applied machine learning</b>, and <b>quantitative research</b> where I can combine strong modeling instincts with the ability to build robust pipelines and deliver results that hold up under real world constraints.
+</p>
+
+<p>
+If you are building large scale modeling workflows, deploying machine learning under strict validation requirements, or extracting signal from complex scientific and industrial data, I would be glad to collaborate.
+</p>
+                     </p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/thodorispanagiotakopoulos-PhD"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/theodorospanagiotakopoulos"><i class="fab fa-github"></i></a>
@@ -202,7 +190,26 @@ The <b>resulting embeddings</b> are not only useful for similarity scoring. They
 
                    </li>
                </ul>
-   
+ 
+
+
+
+
+
+
+ <ul>
+                   <li> <p>
+  To address <b>class imbalance</b> and improve <b>generalization</b>, I augmented the ResNet 18 training dataset using a <b>U Net denoising diffusion model</b> to synthesize additional <b>minority class</b> lithography simulation images. Several pattern groups were under represented compared with the dominant classes, which can bias <b>metric learning</b> by shaping the <b>embedding space</b> around what the model sees most often and reducing sensitivity to rare but important geometries. I trained the diffusion model to generate <b>class consistent</b> samples that preserve the <b>structural signatures</b> of each minority group while introducing <b>realistic within class variation</b> that mirrors what appears in lithography simulations. This included small edge shifts, subtle linewidth changes, localized smoothing, and process like noise that affect appearance without changing the underlying pattern identity. I then integrated these synthesized samples into the same <b>preprocessing</b> and <b>triplet construction</b> pipeline so they were treated as first class training examples rather than separate artifacts. Increasing minority class coverage improved the quality of <b>hard triplets</b> and reduced the chance that the model learned an embedding dominated by majority patterns. The result was improved <b>validation stability</b> and more reliable <b>similarity rankings</b> across pattern groups, with reduced bias toward over represented classes and better robustness to plausible structural variation.
+
+ </ul> 
+
+
+
+
+
+
+
+
               
 
  <ul>
@@ -313,21 +320,16 @@ Overall, <b>I developed</b> an <b>end to end framework</b> that combines <b>cali
   <li>
 
 <p>
-In this project, I delivered an end to end capability to <b>predict the final deposition morphology</b> of <b>Pb on Ge(111)</b>, producing relaxed atomic patterns that normally require expensive simulation. I translated the physics of atomic relaxation into a <b>deployable machine learning workflow</b> that is accurate on held out structures and scalable to large surfaces.
+In this project, I delivered an <b>end to end</b> capability to predict the final <b>deposition morphology</b> of <b>Pb on Ge111</b>, producing relaxed atomic patterns that normally require expensive simulation. I translated the physics of atomic relaxation into a deployable <b>machine learning workflow</b> that is accurate on <b>held out structures</b> and scalable to <b>large surfaces</b>. I built the solution by first exposing the real failure mode. I implemented a <b>2D CNN baseline</b> as a fast diagnostic model and evaluated it against the reference morphology. It captured the broad pattern but failed in the regions that determine reliability. The largest errors concentrated at <b>island edges</b> and <b>steps</b>, and the error distribution developed a <b>long right tail</b>, meaning a small fraction of atoms produced large mistakes that dominate worst case behavior. I treated that signal as an engineering constraint and redesigned the representation to remove the root cause rather than tuning around it. I then implemented a <b>3D voxel CNN</b> that preserves depth information and learns true three dimensional local structure. For each reference atom, I voxelized its neighborhood into a <b>10 &times; 10 &times; 10</b> grid with <b>6 feature channels</b>, forming an input tensor of size <b>10 &times; 10 &times; 10 &times; 6</b>. 
 
-I built the solution by first exposing the real failure mode. I implemented a <b>2D CNN baseline</b> as a fast diagnostic model and evaluated it against the reference morphology. It captured the broad pattern but failed in the regions that determine reliability. The largest errors concentrated at <b>island edges and steps</b>, and the error distribution developed a <b>long right tail</b>, meaning a small fraction of atoms produced large mistakes that dominate worst case behavior. I treated that signal as an engineering constraint and redesigned the representation to remove the root cause rather than tuning around it.
+The network predicts a physically meaningful target, the local displacement of the center atom as <b>&Delta;x</b>, <b>&Delta;y</b>, <b>&Delta;z</b>, which makes the output directly actionable for reconstructing the relaxed structure. I drove model selection through disciplined experimentation. I explored convolution depth, filter counts, pooling strategy, dense layer width, dropout, learning rate schedules, and batch size, and I selected the final architecture using an <b>80 20</b> train validation split, <b>mean squared error</b> loss, <b>early stopping</b>, and <b>learning rate scheduling</b>. The objective was <b>reliability</b>, not just a good average. The design target was a model that reduces edge driven outliers because those are the cases that determine whether a morphology predictor is usable at scale. I trained using the <b>Adam optimizer</b> with a learning rate near <b>10<sup>&minus;3</sup></b>, with early stopping and scheduling to maximize generalization. To scale the method to large systems, I engineered a <b>sliding window inference</b> pipeline. Each atom appears in multiple overlapping voxel neighborhoods, so it receives multiple displacement predictions from different local contexts. 
 
-I then implemented a <b>3D voxel CNN</b> that preserves depth information and learns true three dimensional local structure. For each reference atom, I voxelize its neighborhood into a <b>10 by 10 by 10</b> grid with <b>6 feature channels</b>, forming an input tensor of size <b>10 by 10 by 10 by 6</b>. The network predicts a physically meaningful target, the <b>local displacement</b> of the center atom as <b>delta x, delta y, delta z</b>, which makes the output directly actionable for reconstructing the relaxed structure.
+I combine these using <b>overlap aware averaging</b> to produce one final displacement per atom, then reconstruct the relaxed structure by adding the predicted displacement to the initial position. This converts a fixed input CNN into a <b>large surface morphology engine</b> while maintaining consistency across the full system. On held out test structures, the 3D voxel CNN reproduces the reference morphology with a displacement mean absolute error near <b>0.04 angstrom</b> and a strongly reduced large error tail relative to the 2D projection baseline. The remaining hardest atoms are still near edges where coordination changes rapidly, but the hotspots are far weaker and far less widespread. The result is a predictor that remains stable in the exact regimes where simpler models break down. To support high throughput training and reliable generalization, I built a distributed <b>PySpark data pipeline</b> to convert more than <b>10K</b> atomic configurations into more than <b>600K</b> voxel tensors, eliminating ingestion bottlenecks for 3D model training. To address imbalance in local environments and deposition conditions, especially the under represented edge and step neighborhoods that drive the long tail, I trained a <b>3D U Net denoising diffusion model</b> to synthesize additional voxelized neighborhoods for augmentation. The diffusion generated tensors increased coverage of rare structural regimes and exposed the displacement regressor to a wider range of physically plausible local morphologies, improving <b>validation stability</b> and reducing bias toward the most common interior environments. 
 
-I drove model selection through disciplined experimentation. I explored convolution depth, filter counts, pooling strategy, dense layer width, dropout, learning rate schedules, and batch size, and I selected the final architecture using an <b>80 20 train validation split</b>, <b>mean squared error loss</b>, <b>early stopping</b>, and <b>learning rate scheduling</b>. The objective was reliability, not just a good average. The design target was a model that reduces edge driven outliers because those are the cases that determine whether a morphology predictor is usable at scale.
+I also implemented a <b>3D Vision Transformer</b> to evaluate whether self attention could better capture broader context within voxelized atomic neighborhoods. Each <b>10 &times; 10 &times; 10 &times; 6</b> input volume was partitioned into fixed size 3D patches, embedded with positional information, and processed by a stack of Transformer encoder layers before a regression head predicted <b>&Delta;x</b>, <b>&Delta;y</b>, <b>&Delta;z</b>. While the Transformer captured coarse structural context, it proved less reliable in localized edge dominated regimes and incurred substantially higher inference cost, which reinforced the choice of convolutional architectures for scalable deployment. 
 
-The final architecture processes the input through <b>two 3D convolution layers</b> with <b>32 and 64 filters</b> and <b>max pooling</b>, compresses to <b>512 features</b>, and maps through a <b>64 neuron dense layer</b> with <b>dropout</b> to predict the displacement vector. I trained using the <b>Adam optimizer</b> with a learning rate near <b>10 to the minus 3</b>, with early stopping and scheduling to maximize generalization.
+The outcome is a morphology workflow that is <b>fast</b>, <b>scalable</b>, and designed for <b>real decision making</b>. Once trained, it produces relaxed deposition patterns in minutes rather than days, enabling large scale nucleation and morphology studies that would otherwise be computationally impractical. This capability, combined with the energy and chemical potential modeling, played a pivotal role in securing <b>NSF funding</b>.
 
-To scale the method to large systems, I engineered a <b>sliding window inference pipeline</b>. Each atom appears in multiple overlapping voxel neighborhoods, so it receives multiple displacement predictions from different local contexts. I combine these using <b>overlap aware averaging</b> to produce one final displacement per atom, then reconstruct the relaxed structure by adding the predicted displacement to the initial position. This converts a fixed input CNN into a <b>large surface morphology engine</b> while maintaining consistency across the full system.
-
-On held out test structures, the 3D voxel CNN reproduces the reference morphology with a displacement mean absolute error near <b>0.04 angstrom</b> and a strongly reduced <b>large error tail</b> relative to the 2D projection baseline. The remaining hardest atoms are still near edges where coordination changes rapidly, but the hotspots are far weaker and far less widespread. The result is a predictor that remains stable in the exact regimes where simpler models break down.
-
-The outcome is a <b>morphology workflow</b> that is <b>fast</b>, <b>scalable</b>, and designed for real decision making. Once trained, it produces relaxed deposition patterns in minutes rather than days, enabling large scale nucleation and morphology studies that would otherwise be computationally impractical. This capability, combined with the energy and chemical potential modeling, played a pivotal role in <b>securing NSF funding</b>.
 </p>
 
 
@@ -342,7 +344,7 @@ The outcome is a <b>morphology workflow</b> that is <b>fast</b>, <b>scalable</b>
                            <p>
 								<ul>
   <li>
-I initiated an interdisciplinary collaboration between the <b>Department of Physics</b> and the <b>Department of Statistics</b> and led the development of a machine learning methodology for <b>node classification on incomplete graph datasets</b>, where missing nodes can destabilize message passing and degrade accuracy. I designed the work to quantify how different node removal patterns impact performance and to engineer a strategy that remains reliable under sparse observations. I selected <b>Simplified Graph Convolutional Networks</b> for their efficiency and interpretability, and I implemented the full pipeline from scratch in <b>Julia</b> using <b>Flux</b>, including data transforms, training, and evaluation. I engineered three reduction protocols that represent distinct missing data regimes, truncation of the last n nodes, random removal of a fixed fraction of nodes, and removal of a contiguous node block, then recomputed the normalized adjacency operator with self loops and degree normalization and applied <b>third order propagation</b> by raising the operator to the third power to capture higher order structure with minimal overhead. Training followed the SGC workflow with precomputed propagated features and a <b>linear classifier</b> trained using <b>cross entropy loss</b> and the <b>Adam optimizer</b> with a <b>60 percent training</b> and <b>40 percent testing</b> split, and I evaluated performance on reduced graphs and transfer back to the full graph. I introduced a <b>parameter averaging</b> strategy by training models on slightly different reduced graphs and averaging their learned weight matrices, which consistently improved robustness, especially under structured missingness. On the <b>Cora</b> citation benchmark, this raised accuracy from roughly <b>91 percent</b> to as high as <b>94 percent</b> when applying the aggregated model back to the full dataset. I validated the approach on synthetic networks generated with the <b>Barabasi Albert</b> model to confirm scaling behavior and generalization beyond a single dataset, delivering a computationally light method that remains dependable under incomplete graph observations and demonstrating research leadership through cross department coordination, rigorous experimentation, and production quality implementation.
+I initiated an interdisciplinary collaboration between the <b>Department of Physics</b> and the <b>Department of Statistics</b> and led the development of a machine learning methodology for <b>node classification on incomplete graph datasets</b>, where missing nodes can destabilize message passing and degrade accuracy. I designed the work to quantify how different node removal patterns impact performance and to engineer a strategy that remains reliable under sparse observations. I selected <b>Simplified Graph Convolutional Networks</b> for their efficiency and interpretability, and I implemented the full pipeline from scratch in <b>Julia</b> using <b>Flux</b>, including data transforms, training, and evaluation. I engineered three reduction protocols that represent distinct missing data regimes, truncation of the last n nodes, random removal of a fixed fraction of nodes, and removal of a contiguous node block, then recomputed the normalized adjacency operator with self loops and degree normalization and applied <b>third order propagation</b> by raising the operator to the third power to capture higher order structure with minimal overhead. Training followed the SGC workflow with precomputed propagated features and a <b>linear classifier</b> trained using <b>cross entropy loss</b> and the <b>Adam optimizer</b> with a <b>60% training</b> and <b>40% testing</b> split, and I evaluated performance on reduced graphs and transfer back to the full graph. I introduced a <b>parameter averaging</b> strategy by training models on slightly different reduced graphs and averaging their learned weight matrices, which consistently improved robustness, especially under structured missingness. On the <b>Cora</b> citation benchmark, this raised accuracy from roughly <b>91%</b> to as high as <b>94%</b> when applying the aggregated model back to the full dataset. I validated the approach on synthetic networks generated with the <b>Barabasi Albert</b> model to confirm scaling behavior and generalization beyond a single dataset, delivering a computationally light method that remains dependable under incomplete graph observations and demonstrating research leadership through cross department coordination, rigorous experimentation, and production quality implementation.
 
 
 
@@ -929,7 +931,7 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                  <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p>As an engineer by day and a dedicated technologist by night, I integrate a deep-rooted passion for innovation with a strong commitment to technical excellence. The world of software development is more than just a profession—it is where I find clarity, creativity, and inspiration.</p>
+                    <p>As an engineer by day and a dedicated technologist by night, I integrate a deep-rooted passion for innovation with a strong commitment to technical excellence. The world of software development is more than just a profession, it is where I find clarity, creativity, and inspiration.</p>
 
 <p>With a Ph.D. in computational modeling and a strong foundation in coding, I continually explore the latest advancements in web development frameworks and front-end technologies. My goal is to not only stay ahead of the curve but to contribute meaningfully to the ever-evolving landscape of digital innovation.</p>
 
