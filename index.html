@@ -110,33 +110,36 @@
                         <i class="fa fa-file-pdf"></i><a href="Theodoros_Panagiotakopoulos.pdf"
                          download="Theodoros_Panagiotakopoulos.pdf">Download Resume</a>    
                          
+<div style="text-align: justify; hyphens: auto;">
+
+<div style="text-align: justify; hyphens: auto;">
+
 <p>
-Hi, I am <b>Theodoros Panagiotakopoulos</b>, a <b>PhD physicist</b> and <b>applied machine learning</b> engineer focused on turning scientific problems into <b>scalable data products</b>. My work sits at the intersection of <b>data science</b>, <b>physics based modeling</b>, and <b>high performance software</b>, with an emphasis on building pipelines that are reliable under real constraints and produce outputs that are easy to validate, compare, and deploy.
+Hi, I’m <b>Theodoros Panagiotakopoulos</b>, a PhD physicist and applied machine learning engineer.
 </p>
 
 <p>
-At <b>ASML</b>, I built a <b>terabyte scale data processing and visualization framework</b> to evaluate machine learning optics models against rigorous simulation at production scale. Because the production optimizer does not evaluate on validation data during training, I designed an independent checkpoint evaluation pipeline that loads intermediate artifacts, aligns them with reference outputs, applies scenario specific EUV and DUV sanity filters to reject unphysical values, and computes physically meaningful error metrics with <b>aerial image RMSE</b> as the primary signal. I structured analysis across the true sources of variation in the dataset including <b>slits</b>, <b>groups</b>, and <b>queueTags</b>, producing compact summary tables that expose overfitting and failure modes rather than hiding them in averages. I engineered the system for real workload bottlenecks by parallelizing I O heavy ingestion with <b>ThreadPoolExecutor</b>, accelerating compute heavy stages with <b>ProcessPoolExecutor</b>, and scaling the largest aggregations with <b>Dask</b> to avoid memory limits while preserving a pandas style workflow. The result reduced analysis time by roughly <b>80%</b>, enabled routine large scale validation, and became a standard tool for ML and simulation experiments because it made model quality measurable, comparable, and difficult to misinterpret.
+I build machine learning systems for scientific and industrial problems where <b>correctness, scalability, and validation</b> matter.
 </p>
 
 <p>
-In parallel, I developed deep learning methods for representation learning in lithography. I built a <b>triplet learning</b> framework that replaces pixel level comparisons with a compact <b>embedding space</b> trained to capture pattern structure. The pipeline includes consistent preprocessing, automated train validation partitioning, early stopping, and hard triplet mining with cosine similarity scoring, and it exports structured similarity tables for downstream reporting. To improve generalization under imbalance across pattern groups, I trained a <b>U Net denoising diffusion model</b> to synthesize minority class lithography images and integrated the generated samples into the same triplet construction workflow, improving validation stability and the reliability of similarity rankings.
+At <b>ASML</b>, I worked on distributed data processing and large-scale evaluation frameworks for machine learning optics models used in production. I designed systems that combine distributed computing with physically meaningful ML validation, making model failure modes measurable and operational at scale.
 </p>
 
 <p>
-In my <b>PhD research</b> at the <b>University of Central Florida</b>, I build machine learning pipelines that reproduce expensive materials simulations while remaining stable on the hardest regimes. I delivered an end to end workflow to predict <b>Pb on Ge111</b> deposition morphology by learning local atomic relaxation as a displacement vector in <b>three dimensions</b>. A 2D CNN baseline revealed a long tail failure mode concentrated at island edges and steps, so I redesigned the representation and implemented a <b>3D voxel CNN</b> that predicts <b>&Delta;x</b>, <b>&Delta;y</b>, <b>&Delta;z</b> from <b>10 &times; 10 &times; 10 &times; 6</b> neighborhood tensors. I engineered a sliding window inference system with overlap aware averaging so a fixed input network scales to large surfaces, and I built a distributed <b>PySpark</b> pipeline to convert more than <b>10K</b> atomic configurations into more than <b>600K</b> voxel tensors for high throughput training. To reduce the long tail errors driven by rare edge and step environments, I trained a <b>3D U Net denoising diffusion model</b> to synthesize under represented voxel neighborhoods for augmentation, improving generalization and validation stability. I also implemented a <b>3D Vision Transformer</b> as a controlled comparison and found it less reliable in localized edge dominated regimes and substantially more expensive at inference time, reinforcing convolutional architectures for scalable deployment.
+At the <b>University of Central Florida</b>, my research focused on machine learning for materials and physics simulations. I developed neural models that reproduce expensive first-principles calculations, including 3D convolutional networks, diffusion-based augmentation methods, and physics-informed neural networks.
 </p>
 
 <p>
-I also build physics anchored machine learning systems where correctness matters. I developed a <b>physics informed neural network</b> for electromagnetics that solves the two dimensional Helmholtz equation by minimizing the PDE residual and enforcing the Sommerfeld radiation condition, using a <b>SIREN</b> representation to model highly oscillatory fields. In electrochemistry, I implemented voltage controlled simulation workflows and used grand canonical DFT style modeling to study reaction energetics and identify mechanisms such as proton shuttling in hydrogen evolution and cation dependent behavior in CO<sub>2</sub> reduction. Across these projects, the consistent theme is disciplined modeling, careful validation, and engineering systems that scale.
+My technical toolkit includes <b>Python, C++, Julia, SQL, and HPC environments</b>, with experience in PyTorch, TensorFlow, distributed data processing, and production-grade scientific software. I am interested in roles in data science, applied machine learning, and quantitative research where strong modeling and reliable engineering must coexist.
 </p>
 
 <p>
-My technical toolkit includes <b>Python</b>, <b>C++</b>, <b>Julia</b>, <b>SQL</b>, and <b>HPC</b> environments, with experience in <b>PyTorch</b>, <b>TensorFlow</b>, distributed data processing, and production grade scientific software. I am interested in roles in <b>data science</b>, <b>applied machine learning</b>, and <b>quantitative research</b> where I can combine strong modeling instincts with the ability to build robust pipelines and deliver results that hold up under real world constraints.
+If you are building large-scale modeling systems, deploying machine learning under strict validation requirements, or working with complex scientific data, I would be glad to connect.
 </p>
 
-<p>
-If you are building large scale modeling workflows, deploying machine learning under strict validation requirements, or extracting signal from complex scientific and industrial data, I would be glad to collaborate.
-</p>
+</div>
+
                      </p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/thodorispanagiotakopoulos-PhD"><i class="fab fa-linkedin-in"></i></a>
@@ -155,10 +158,10 @@ If you are building large scale modeling workflows, deploying machine learning u
             <div class="flex-grow-1">
                 <h3 class="mb-0">Modeling Product Engineer, ASML, Silicon Valley</h3>
                 <div class="subheading mb-3"> </div>
-                <p>
-                 <ul>
-                     <li>
-                         <p>
+
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
 At <b>ASML</b>, I built a data processing and visualization framework to evaluate machine learning optics models against rigorous simulations at scale. In the production workflow, the optimizer does not evaluate on validation data during training because doing so would significantly increase runtime and memory usage. That constraint creates a real risk. A model can appear to improve during training while silently overfitting, and the training loop will not reveal it. I designed an independent evaluation pipeline that loads intermediate checkpoints, aligns them with rigorous reference outputs, applies scenario specific <b>EUV</b> and <b>DUV</b> sanity filters to reject unphysical values, and then computes physically meaningful error metrics that directly reflect optical fidelity.
 
 The core <b>metric</b> I emphasized was the <b>aerial image RMSE</b>, because it is both physically interpretable and sensitive to generalization failure. A model that memorizes training conditions tends to break when evaluated across the true sources of variation in the dataset, including <b>slits, groups, and queueTags</b>. My pipeline explicitly separates training and validation populations, computes aerial image RMSE across these axes, and aggregates results into compact summary tables that make failure modes obvious rather than hidden in averages. This turned model evaluation into an engineering diagnostic instead of a one number report.
@@ -168,15 +171,15 @@ I <b>engineered</b> the system to handle the reality of the workload. The pipeli
 After ingestion, the <b>bottleneck shifted to computation</b>. Computing aerial image RMSE and related metrics across slits, groups, and queueTags is <b>CPU heavy</b>, and the largest runs could exceed single machine memory limits when aggregating high resolution data across many conditions. I used <b>Pandas</b> as the default engine because it integrates cleanly with plotting, CSV export, and downstream analysis, but I treated it as the baseline rather than the ceiling. When DataFrame scale became the limiter, I introduced a layered execution strategy. I used <b>ProcessPoolExecutor</b> for compute parallelism where it provided the best speedup, and for the largest multi hundred gigabyte aggregations I switched to <b>Dask</b> so computations could be chunked and distributed across cores without memory thrashing. This preserved the pandas style workflow while removing the single node constraints.
 
 The <b>final result</b> was a <b>terabyte scale CNN analysis pipeline</b> that was fast, stable, and operationally usable by others. It <b>reduced analysis time by roughly 80% </b>, enabled routine large scale validation that previously could not be run often enough, and it <b>exposed critical overfitting</b> that was invisible inside the training loop. My team adopted the framework as a standard tool for large scale ML and simulation experiments because it made model quality measurable, comparable, and difficult to misinterpret.
-</p>
 
-                     </li>
-                 </ul>
+  </li>
+</ul>
+
               
              
-               <ul>
-                   <li>
-                       <p>
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
 I developed a <b>Deep Learning</b> framework to measure similarity between lithography simulation images using <b>triplet learning</b>. The goal was to replace brittle pixel level comparisons with a representation that captures <b>pattern structure</b> in a way that aligns with how lithography quality is judged in practice. I trained a <b>ResNet18</b> convolutional model to project images into a compact <b>embedding space</b> where visually and structurally similar patterns are mapped close together and dissimilar patterns are pushed apart.
 
 I <b>built the pipeline end to end</b>, including preprocessing, data organization, training controls, and exportable analysis outputs. I applied consistent input transformations including resizing, grayscale conversion, normalization, and tensor conversion so the network sees a stable representation across simulation sources. The framework automatically partitions data into training and validation sets and uses early stopping so convergence is reliable rather than driven by overtraining.
@@ -187,33 +190,23 @@ In the <b>embedding space</b>, I used <b>cosine similarity</b> as the similarity
 
 The <b>resulting embeddings</b> are not only useful for similarity scoring. They provide a reusable representation that supports <b>clustering, anomaly detection, and model validation</b>, which extends the framework into a general tool for organizing simulation outputs and diagnosing model behavior within lithography workflows.
 
-
-                   </li>
-               </ul>
- 
+  </li>
+</ul>
 
 
 
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
 
-
-
- <ul>
-                   <li> <p>
   To address <b>class imbalance</b> and improve <b>generalization</b>, I augmented the ResNet 18 training dataset using a <b>U Net denoising diffusion model</b> to synthesize additional <b>minority class</b> lithography simulation images. Several pattern groups were under represented compared with the dominant classes, which can bias <b>metric learning</b> by shaping the <b>embedding space</b> around what the model sees most often and reducing sensitivity to rare but important geometries. I trained the diffusion model to generate <b>class consistent</b> samples that preserve the <b>structural signatures</b> of each minority group while introducing <b>realistic within class variation</b> that mirrors what appears in lithography simulations. This included small edge shifts, subtle linewidth changes, localized smoothing, and process like noise that affect appearance without changing the underlying pattern identity. I then integrated these synthesized samples into the same <b>preprocessing</b> and <b>triplet construction</b> pipeline so they were treated as first class training examples rather than separate artifacts. Increasing minority class coverage improved the quality of <b>hard triplets</b> and reduced the chance that the model learned an embedding dominated by majority patterns. The result was improved <b>validation stability</b> and more reliable <b>similarity rankings</b> across pattern groups, with reduced bias toward over represented classes and better robustness to plausible structural variation.
 
- </ul> 
-
-
-
-
-
-
-
-
+  </li>
+</ul>
               
 
- <ul>
-                   <li> <p>
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
 I built a <b>Physics Informed Neural Network</b> for electromagnetics to solve the <b>two dimensional Helmholtz equation</b>. The network does not learn from labeled simulation targets. It learns by satisfying the governing physics, meaning its predictions are driven by the PDE and boundary conditions rather than by a dataset of precomputed fields. I implemented the solver with a <b>SIREN sinusoidal representation network</b> so it can accurately represent the high frequency oscillations that are intrinsic to wave propagation.
 
 The <b>model takes spatial coordinates as input</b> and outputs the <b>real and imaginary components</b> of the complex electric field. I chose SIREN because wave solutions are highly oscillatory and standard activation functions tend to smooth or underfit them. Sine activations with frequency scaled initialization make these oscillations learnable with a compact network, so the solver achieves high fidelity field structure without relying on brute force depth.
@@ -228,10 +221,27 @@ After training, I evaluate the learned field on a dense uniform grid to visualiz
 
 Overall, this project <b>delivers a practical neural PDE solver built around the requirements that actually matter for wave problems</b>. It uses a representation suited to oscillatory fields, enforces physically correct radiation behavior, and applies an optimization strategy that converges reliably. The result is a flexible foundation that can extend to more complex geometries, material layouts, and source configurations while keeping the solution anchored in first principles physics.
 
- </ul> 
-                      
-                <ul>
-                   <li> <p>
+  </li>
+</ul>
+
+
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
+At <b>ASML</b>, I designed and built <b>scalable data-processing libraries</b> and <b>distributed ETL pipelines</b> using <b>PySpark</b> to standardize the cleaning, validation, and preprocessing of over <b>400+ GB of simulation metadata</b> used by product engineering teams. The architecture was based on <b>Apache Spark’s distributed computing framework</b>, where raw simulation outputs (CSV, Parquet, JSON, and proprietary log formats) were ingested into a centralized <b>data lake</b> and processed using <b>PySpark DataFrames</b> and <b>Spark SQL</b>. I implemented <b>schema enforcement</b>, <b>metadata harmonization</b>, <b>null handling</b>, <b>normalization</b>, <b>deduplication</b>, and <b>rule-based validation logic at scale</b> to ensure consistency across heterogeneous simulation sources. 
+
+The solution followed a <b>layered data architecture (raw, standardized, curated)</b>, ensuring <b>reproducibility</b> and <b>traceability of transformations</b>. I developed <b>modular, reusable Python libraries</b> on top of <b>PySpark</b> to abstract common preprocessing logic, enforce <b>data contracts</b>, and allow engineering teams to onboard new simulation formats with minimal changes. Performance optimization techniques such as <b>partitioning strategies</b>, <b>broadcast joins</b>, <b>caching</b>, and <b>predicate pushdown</b> were applied to efficiently process large datasets.
+
+In addition to <b>PySpark</b>, I used supporting Python libraries such as <b>Pandas</b> and <b>NumPy</b> for local prototyping and validation logic, <b>PyArrow</b> for efficient columnar data handling, and <b>structured logging frameworks</b> for monitoring and debugging distributed jobs. The resulting framework <b>reduced preprocessing time</b>, <b>improved data quality</b>, and provided a <b>scalable and standardized foundation</b> for downstream analytics and model validation workflows across multiple engineering teams.
+
+  </li>
+</ul>
+
+
+
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
 I worked with the <b>Tachyon</b> software stack and led a focused investigation of <b>geometrical corner rounding</b> with the goal of improving both accuracy and production efficiency. I personally designed and executed <b>FEM plus</b> simulation studies and quantified performance across the dimensions that matter in deployment, including <b>total runtime</b>, <b>memory usage</b>, and <b>grid dependence</b>. I then performed a detailed runtime breakdown to isolate the true cost drivers, separating <b>corner rounding time</b>, <b>render area and render edge time</b>, and <b>EM3D time</b>, which made optimization decisions defensible and measurable.
 
 For contour to contour validation, I designed <b>LMC plus</b> simulations and used the <b>MPC layer</b> as the golden reference for comparison. I translated these results into clear engineering conclusions, aligned on the interpretation with <b>R&D</b>, and drove the change through to production. The update was incorporated into the <b>latest Tachyon release</b> and delivered to <b>one of our largest customers</b>, turning analysis into customer facing impact.
@@ -240,14 +250,16 @@ I also established that using an updated geometrical corner rounding value enabl
 
 In parallel, I identified a critical defect in Tachyon that produced <b>asymmetric jog artifacts</b> after applying the corner rounding algorithm. I isolated the root cause, proposed a concrete fix, and worked with <b>R&D</b> to integrate the solution into the codebase. The result was a more robust corner rounding workflow with improved reliability under real production conditions.
 
- </ul> 
+  </li>
+</ul>
+
                 
-                   <ul>
-                  <li> <p>
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
 I led a full <b>transition cross coefficient</b> optimization effort designed to cut compute cost without sacrificing optical accuracy. I built a rigorous simulation campaign in <b>Tachyon</b> using <b>M3D</b> workflows with <b>FEM plus</b>, and I structured the study to identify the smallest TCC basis that still reproduces baseline behavior within tight manufacturing tolerances.
 
 To make the result robust and transferable, I tested a broad matrix of imaging conditions and mask types. I evaluated <b>high numerical aperture</b> and <b>low numerical aperture</b> regimes, paired with both <b>low refraction index masks</b> and <b>binary masks</b> with strong refractive index contrast. I also diversified the geometric coverage of the test suite using <b>one dimensional</b> and <b>two dimensional</b> patterns, plus <b>circular</b>, <b>elliptical</b>, and <b>polygonal</b> structures. This ensured the optimized TCC setting was not tuned to a narrow corner case but validated across realistic pattern classes.
-
 
 I quantified performance using the metric that matters for imaging fidelity, the <b>aerial image critical dimension difference</b> between the baseline model and reduced TCC models. I identified an <b>optimal TCC number</b> that delivered a <b>significant reduction in runtime and memory usage</b> while keeping accuracy inside strict specifications, including <b>aerial image agreement within 0.1 nanometer</b> and <b>positional shift in x and y below 0.01 nanometer</b>. The outcome was a computational setting that improves throughput while preserving the integrity of the image formation model.
 
@@ -255,35 +267,37 @@ I translated the analysis into a production change by aligning the interpretatio
 
 To support scale and repeatability, I wrote custom <b>Python</b> and <b>C++</b> tooling to extract, filter, and analyze simulation output at volume. I implemented a workflow distinct from my prior project, built around automation and structured validation, so large datasets could be processed consistently with minimal manual effort. The result was an analysis pipeline that enables rapid iteration, defensible comparisons, and reliable decision making for future modeling and optimization studies.
 
+  </li>
+</ul>
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
 
-                </ul> 
-
-                </p>
-
-
-
- <ul>
-                <li> <p>
 To support my projects, I engineered my analysis code into an <b>object oriented Python framework</b> built for <b>automated large scale dataset processing</b>. I designed the architecture for reuse and extension, applying core OOP principles such as <b>inheritance</b> and <b>polymorphism</b> to keep new workflows consistent without duplicating logic.
 
 I implemented a <b>modular</b> design with optimized <b>input output handling</b> for high volume simulation data, and I wrote <b>clear documentation</b> so the framework could be adopted and maintained beyond my own use. I integrated the work into the company’s <b>GitLab</b> repository using clean structure and reproducible execution patterns, enabling team level collaboration and long term support.
 
 The framework was later adopted by <b>ASML product engineering</b>, demonstrating that the work delivered lasting value as shared infrastructure, not just a one off solution for a single project.
-</p>
-                </ul>
+
+  </li>
+</ul>
 
 
 
-                <ul>
-                <li> <p>
+
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
 I enhanced the <b>API library</b> used to build and run <b>Tachyon</b> simulations, aligning the interface and behavior with <b>ASML standards</b>. I audited the codebase end to end, identified multiple reliability issues, and delivered targeted fixes that eliminated failure modes and reduced debugging overhead for the team.
 
 Beyond bug fixes, I expanded the library with <b>new functionality</b> that streamlines simulation setup and accelerates result generation. The updates improve day to day productivity by reducing boilerplate, enforcing consistent configuration, and enabling faster iteration when exploring parameter space. The impact was especially strong for <b>FEM plus</b> workflows, where the improvements increased <b>performance</b> and strengthened <b>runtime stability</b> under demanding workloads.
 
 The outcome is a more <b>robust</b>, <b>efficient</b>, and <b>maintainable</b> API layer that makes high quality simulations easier to build, easier to reproduce, and faster to deliver. It raised the baseline for the entire workflow, strengthening the team’s ability to execute complex studies with confidence and speed.
-</p>
 
-                </ul>
+  </li>
+</ul>
+
+
+
 
             </div>
         </div>
@@ -293,9 +307,17 @@ The outcome is a more <b>robust</b>, <b>efficient</b>, and <b>maintainable</b> A
 						<div class="flex-grow-1">
                             <h3 class="mb-0">Research Assistant, University of Central Florida</h3>
                             <div class="subheading mb-3">  Artificial Inteligence, DOE - NSF Grant </div>
-                            <p>
-							<ul>
-  <li><p>
+<style>
+.justified-text {
+  text-align: justify;
+  hyphens: auto;
+}
+</style>
+
+<ul>
+  <li>
+    <p class="justified-text">
+
 This project focuses on a <b>fundamental problem in semiconductor fabrication</b>. Understanding and predicting how metals deposit on semiconductor surfaces is critical because deposition controls <b>contact formation, interface stability, and device reliability</b>. I studied <b>epitaxial Pb growth on the Ge(111) surface</b>, where experiments show an initially uniform wetting layer followed by an abrupt transition to <b>island formation at a critical coverage</b> that is difficult to determine precisely from microscopy alone.
 
 I <b>established the physical baseline</b> using <b>first principles modeling</b>. I performed <b>Density Functional Theory calculations</b> for Pb on Ge(111) and used <b>DFT + U+ J</b> to correct known limitations of standard approximations for germanium. By calibrating the <b>Hubbard U and exchange J parameters</b>, I reproduced the experimental <b>Ge band gap near 0.67 eV</b>, ensuring that the electronic structure governing <b>bonding and charge redistribution at the interface</b> was accurately captured. With these calibrated energetics, I computed the <b>Pb chemical potential as a function of coverage</b> from <b>1.0 to 1.7 monolayers</b>. Chemical potential represents the <b>energetic cost of adding one more Pb atom</b>, allowing a direct comparison between <b>wetting layer stability and bulk like clustering</b>. The DFT results show a clear transition at <b>about 1.33 monolayers</b>, identifying the <b>onset of nucleation</b>.
@@ -309,17 +331,24 @@ For <b>Model 2</b>, I trained a second neural network to predict <b>system energ
 This pipeline resolves the failure mode that matters most. The two stage model produces <b>energy residuals tightly centered near zero</b> that <b>do not drift with coverage</b>, which is exactly what is required for a <b>stable chemical potential</b>. When I computed chemical potential using the machine learning energies, the curve was <b>smooth</b> and it predicted <b>nucleation at 1.33 monolayers</b>, in direct agreement with the DFT reference. The model therefore reproduces the <b>thermodynamic switch between wetting and island formation</b> while enabling <b>large scale simulations</b> that are impractical with DFT alone.
 
 Overall, <b>I developed</b> an <b>end to end framework</b> that combines <b>calibrated first principles energetics</b> with <b>scalable machine learning</b> for metal on semiconductor growth. The results and the computational capability they enabled played a <b>pivotal role in securing NSF funding</b>.
-</p>
 
-
+    </p>
+  </li>
 </ul>
-                                    
-                                    
-                                    <p>
-								<ul>
-  <li>
 
-<p>
+                                    
+                                    
+                                    <style>
+.justified-text {
+  text-align: justify;
+  hyphens: auto;
+}
+</style>
+
+<ul>
+  <li>
+    <p class="justified-text">
+
 In this project, I delivered an <b>end to end</b> capability to predict the final <b>deposition morphology</b> of <b>Pb on Ge111</b>, producing relaxed atomic patterns that normally require expensive simulation. I translated the physics of atomic relaxation into a deployable <b>machine learning workflow</b> that is accurate on <b>held out structures</b> and scalable to <b>large surfaces</b>. I built the solution by first exposing the real failure mode. I implemented a <b>2D CNN baseline</b> as a fast diagnostic model and evaluated it against the reference morphology. It captured the broad pattern but failed in the regions that determine reliability. The largest errors concentrated at <b>island edges</b> and <b>steps</b>, and the error distribution developed a <b>long right tail</b>, meaning a small fraction of atoms produced large mistakes that dominate worst case behavior. I treated that signal as an engineering constraint and redesigned the representation to remove the root cause rather than tuning around it. I then implemented a <b>3D voxel CNN</b> that preserves depth information and learns true three dimensional local structure. For each reference atom, I voxelized its neighborhood into a <b>10 &times; 10 &times; 10</b> grid with <b>6 feature channels</b>, forming an input tensor of size <b>10 &times; 10 &times; 10 &times; 6</b>. 
 
 The network predicts a physically meaningful target, the local displacement of the center atom as <b>&Delta;x</b>, <b>&Delta;y</b>, <b>&Delta;z</b>, which makes the output directly actionable for reconstructing the relaxed structure. I drove model selection through disciplined experimentation. I explored convolution depth, filter counts, pooling strategy, dense layer width, dropout, learning rate schedules, and batch size, and I selected the final architecture using an <b>80 20</b> train validation split, <b>mean squared error</b> loss, <b>early stopping</b>, and <b>learning rate scheduling</b>. The objective was <b>reliability</b>, not just a good average. The design target was a model that reduces edge driven outliers because those are the cases that determine whether a morphology predictor is usable at scale. I trained using the <b>Adam optimizer</b> with a learning rate near <b>10<sup>&minus;3</sup></b>, with early stopping and scheduling to maximize generalization. To scale the method to large systems, I engineered a <b>sliding window inference</b> pipeline. Each atom appears in multiple overlapping voxel neighborhoods, so it receives multiple displacement predictions from different local contexts. 
@@ -330,113 +359,203 @@ I also implemented a <b>3D Vision Transformer</b> to evaluate whether self atten
 
 The outcome is a morphology workflow that is <b>fast</b>, <b>scalable</b>, and designed for <b>real decision making</b>. Once trained, it produces relaxed deposition patterns in minutes rather than days, enabling large scale nucleation and morphology studies that would otherwise be computationally impractical. This capability, combined with the energy and chemical potential modeling, played a pivotal role in securing <b>NSF funding</b>.
 
-</p>
-
-
-
-
+    </p>
+  </li>
 </ul>
+            
 
-                            </p>
-                            
-                             
-                                </p>                                                    
-                           <p>
-								<ul>
+<style>
+.justified-text {
+  text-align: justify;
+  hyphens: auto;
+}
+</style>
+
+<ul>
   <li>
-I initiated an interdisciplinary collaboration between the <b>Department of Physics</b> and the <b>Department of Statistics</b> and led the development of a machine learning methodology for <b>node classification on incomplete graph datasets</b>, where missing nodes can destabilize message passing and degrade accuracy. I designed the work to quantify how different node removal patterns impact performance and to engineer a strategy that remains reliable under sparse observations. I selected <b>Simplified Graph Convolutional Networks</b> for their efficiency and interpretability, and I implemented the full pipeline from scratch in <b>Julia</b> using <b>Flux</b>, including data transforms, training, and evaluation. I engineered three reduction protocols that represent distinct missing data regimes, truncation of the last n nodes, random removal of a fixed fraction of nodes, and removal of a contiguous node block, then recomputed the normalized adjacency operator with self loops and degree normalization and applied <b>third order propagation</b> by raising the operator to the third power to capture higher order structure with minimal overhead. Training followed the SGC workflow with precomputed propagated features and a <b>linear classifier</b> trained using <b>cross entropy loss</b> and the <b>Adam optimizer</b> with a <b>60% training</b> and <b>40% testing</b> split, and I evaluated performance on reduced graphs and transfer back to the full graph. I introduced a <b>parameter averaging</b> strategy by training models on slightly different reduced graphs and averaging their learned weight matrices, which consistently improved robustness, especially under structured missingness. On the <b>Cora</b> citation benchmark, this raised accuracy from roughly <b>91%</b> to as high as <b>94%</b> when applying the aggregated model back to the full dataset. I validated the approach on synthetic networks generated with the <b>Barabasi Albert</b> model to confirm scaling behavior and generalization beyond a single dataset, delivering a computationally light method that remains dependable under incomplete graph observations and demonstrating research leadership through cross department coordination, rigorous experimentation, and production quality implementation.
+    <p class="justified-text">
 
+I developed a <b>segmentation and analysis pipeline</b> to extract <b>physically reliable structural information</b> from noisy <b>STM images</b> of <b>Pb deposition on Ge</b>. STM was the primary experimental probe, so the problem was not cosmetic image cleaning. The objective was to isolate <b>physically meaningful atomic islands</b> in a way that remains stable across large datasets where <b>background variation</b>, <b>tip artifacts</b>, and closely spaced islands make conventional image processing unreliable.
 
+Raw STM scans were first passed through <b>standard statistical preprocessing</b>. I applied <b>Gaussian denoising</b> to suppress high-frequency noise, <b>background flattening</b> to remove scan-dependent height gradients, and <b>threshold-based suppression</b> to eliminate obvious tip artifacts. These steps improved image quality, but they did not solve the core problem. Simple thresholding and connected-component filtering worked on clean scans but failed when background contrast varied or when islands touched or partially overlapped. The method was fragile and required manual tuning, which made it unsuitable for scalable analysis.
 
+To address that limitation, I transitioned to a <b>deep learning–based segmentation approach</b>. I first trained a <b>Faster R-CNN</b> model with a <b>ResNet-50 backbone</b> to localize islands using bounding boxes. The detector was stable under moderate background variation and performed well for island counting and coarse spatial localization. However, bounding boxes are fundamentally too coarse for growth analysis. They cannot capture island edge structure, detailed shape, or height distributions, which are required for physically meaningful morphology metrics.
+
+I extended the pipeline to <b>Mask R-CNN</b> using the same backbone and <b>feature pyramid network</b>, adding a <b>pixel-level mask head</b>. The mask head consisted of stacked <b>3×3 convolutional layers</b> with ReLU activations followed by a <b>1×1 convolution</b> that produced per-pixel instance masks. Training combined <b>classification loss</b>, <b>bounding-box regression loss</b>, and <b>binary cross-entropy mask loss</b>. To stabilize optimization, I applied <b>weight decay</b>, <b>gradient clipping</b>, <b>early stopping</b>, and light <b>data augmentation</b> including small rotations and intensity shifts.
+
+Mask R-CNN resolved the failure modes that broke classical methods. It produced clean, <b>instance-separated island masks</b> even in crowded regions and in the presence of STM-specific artifacts. Adjacent islands were reliably separated, residual tip artifacts were rejected, and performance remained stable under background contrast variation without manual retuning.
+
+These segmentation masks defined the <b>physically meaningful regions</b> of each STM scan and became the foundation for all downstream analysis.
+
+Using the instance-resolved masks, I extracted <b>morphological features</b> in a consistent and reproducible way. These included <b>island area</b>, <b>perimeter</b>, <b>height histograms</b>, and <b>edge-versus-interior classifications</b> derived directly from the STM height signal. By restricting feature extraction strictly to segmented island regions, background noise and scan artifacts were excluded from measurement. This ensured that reported statistics reflect <b>true surface morphology</b> rather than imaging conditions.
+
+I packaged the full segmentation and <b>feature-extraction workflow</b> into a reusable script that outputs <b>per-island masks</b> and <b>structured summary tables</b>. The system can be applied to new STM datasets without manual intervention, enabling <b>scalable and consistent morphological analysis</b>. The result is a <b>stable analysis pipeline</b> that converts noisy experimental STM scans into <b>quantitatively reliable morphology data</b> suitable for modeling <b>thin-film growth</b> and <b>deposition dynamics</b>.
+
+    </p>
+  </li>
 </ul>
 
-                                </p>
- </p>
+<style>
+.justified-text {
+  text-align: justify;
+  hyphens: auto;
+}
+</style>
+
+<ul>
+  <li>
+    <p class="justified-text">
+
+      I built a deep learning framework to model <b>electrochemical time series</b> data with the goal of predicting
+      <b>transient current response</b> under <b>controlled potential</b> protocols and turning sequence modeling into a
+      physically meaningful diagnostic tool. The data came from <b>chronoamperometry</b> and <b>cyclic voltammetry</b>
+      experiments and consisted of ordered sequences of <b>applied potential</b>, <b>time increment</b>, and
+      <b>normalized current density</b>. The challenge was not simply fitting curves. Electrochemical transients contain
+      <b>memory effects</b>, <b>multi timescale relaxation</b>, and <b>path dependent hysteresis</b> that must be preserved
+      if the model is to remain physically credible.
+
+      I designed a preprocessing pipeline that enforces <b>physical consistency</b> before any model sees the data.
+      Raw signals were denoised using <b>Savitzky Golay filtering</b>, <b>baseline corrected</b> to remove drift, and
+      normalized by <b>electrochemically active surface area</b> so experiments are directly comparable. This prevents the
+      network from learning artifacts caused by measurement noise or geometric scaling and ensures it focuses on
+      <b>transport</b> and <b>kinetic</b> behavior rather than instrument variability.
+
+      To model the temporal dynamics, I implemented <b>recurrent neural network (RNN)</b> architectures. The primary model
+      was an <b>LSTM</b>, a gated form of <b>RNN</b> designed to retain information over extended sequences. The architecture
+      used <b>one to two stacked recurrent layers</b> with <b>32 to 64 hidden units</b>, with <b>dropout</b> between layers
+      at <b>0.2 to 0.3</b> to control overfitting. A <b>fully connected regression head</b> mapped the hidden representation
+      to <b>time resolved current density</b> predictions. Inputs were <b>fixed length windows</b> of prior potential and time
+      history, and outputs were the predicted current evolution over subsequent time steps.
+
+      I trained the models using <b>mean squared error (MSE)</b> loss and evaluated them on strictly <b>held out</b>
+      experimental sequences. I also trained <b>GRU</b> models with comparable parameter counts under identical conditions.
+      The <b>LSTM</b> based <b>RNN</b> consistently achieved lower prediction error and more stable <b>long horizon</b>
+      forecasts. The reason was structural. Electrochemical signals contain fast <b>double layer charging</b>, slow
+      <b>diffusion driven relaxation</b>, and <b>hysteresis</b> between forward and reverse potential sweeps. The gated memory
+      cells in <b>LSTM</b> regulate information flow with explicit <b>input</b>, <b>forget</b>, and <b>output gates</b>,
+      which preserves long term dependencies without losing short term detail. The <b>GRU</b> architecture, while efficient,
+      provides less control over long memory retention and showed degradation when predicting extended transients.
+
+      To test whether global attention mechanisms could improve performance, I implemented <b>Transformer</b> based models
+      using <b>self attention</b>. I constructed a causal <b>Transformer encoder</b> with <b>two to four attention layers</b>,
+      model dimensions of <b>64 to 128</b>, and <b>four attention heads</b> per layer. Each block contained <b>multi head
+      attention</b>, a <b>feedforward network</b> with <b>128 to 256 neurons</b>, <b>residual connections</b>,
+      <b>layer normalization</b>, and <b>dropout</b> between <b>0.1 and 0.2</b>. Because Transformers do not inherently encode
+      temporal order, I added <b>sinusoidal positional encodings</b> after projecting the input features. The output of the
+      <b>Transformer</b> was passed through a <b>fully connected regression head</b> to predict <b>time resolved current
+      density</b>, again trained using <b>MSE</b>.
+
+      The <b>Transformer</b> models learned short range correlations and some global structure within fixed windows, but they
+      did not outperform the <b>LSTM</b> based <b>RNN</b>. There were clear reasons. First, the dataset size was moderate,
+      and <b>attention</b> based models typically need more data to learn stable patterns without overfitting. Second,
+      electrochemical transients have strong <b>local continuity</b> governed by physical processes, and recurrent updates
+      align naturally with this sequential causality. Third, the <b>quadratic cost</b> of <b>self attention</b> limited
+      efficient modeling of long trajectories, while <b>RNN</b> models maintain a consistent memory update regardless of
+      sequence length.
+
+      Beyond prediction, I treated the trained <b>LSTM</b> model as an analysis tool. I examined <b>hidden state dynamics</b>
+      and <b>prediction residuals</b> to identify transitions between <b>kinetically controlled</b> and
+      <b>diffusion limited</b> regimes. These transitions aligned with independently observed changes in
+      <b>Tafel slope</b> and diffusion related signatures, supporting the physical relevance of the learned temporal features.
+
+      The final architecture selected for use was the <b>LSTM</b> based <b>RNN</b>. It provided the best balance of
+      <b>predictive accuracy</b>, <b>long horizon stability</b>, and <b>physical interpretability</b>, and it consistently
+      captured the multi timescale memory behavior that defines electrochemical transients.
+
+    </p>
+  </li>
+</ul>
+
+
+
+<style>
+.justified-text {
+  text-align: justify;
+  hyphens: auto;
+}
+</style>
+
+<ul>
+  <li>
+    <p class="justified-text">
+I initiated an interdisciplinary collaboration between the <b>Department of Physics</b> and the <b>Department of Statistics</b> and led the development of a <b>machine learning methodology for node classification on incomplete graph datasets</b>, where missing nodes can destabilize message passing and degrade accuracy. I designed the study to measure how different <b>node removal patterns</b> affect performance and to build a strategy that remains reliable under <b>sparse observations</b>. I selected <b>Simplified Graph Convolutional Networks</b> for their efficiency and interpretability and implemented the full pipeline from scratch in <b>Julia</b> using <b>Flux</b>, including preprocessing, operator construction, training, and evaluation.
+
+I introduced <b>three reduction protocols</b>, truncation of the last n nodes, random removal of a fixed fraction of nodes, and removal of a contiguous node block. After each reduction, I recomputed the <b>normalized adjacency operator</b> with self loops and degree normalization and applied <b>third order propagation</b> to capture higher order structure with minimal overhead. Training followed the SGC workflow using <b>precomputed propagated features</b> and a <b>linear classifier</b> optimized with <b>cross entropy loss</b> and the <b>Adam optimizer</b> under a <b>60% training and 40% testing split</b>. I evaluated performance on reduced graphs and tested transfer back to the original full graph.
+
+By introducing a <b>parameter averaging strategy</b> across models trained on slightly different reduced graphs, I improved <b>robustness under structured missingness</b>. On the <b>Cora benchmark</b>, accuracy increased from about <b>91% to as high as 94%</b> when applying the aggregated model back to the full dataset. I validated scaling behavior on synthetic networks generated using the <b>Barabasi Albert model</b> to confirm <b>generalization beyond a single dataset</b>.
+
+I extended this <b>structured reduction framework</b> to <b>density functional theory based materials modeling</b> by representing atomic systems as <b>graphs</b>, where atoms are nodes and interatomic interactions define edges. I applied <b>physically consistent reduction patterns</b>, such as clustered removals and surface like truncations, to mimic vacancies and finite size effects instead of deleting atoms arbitrarily. I then trained a <b>graph neural network</b> on <b>DFT derived quantities</b>, including <b>local energy contributions</b> and <b>atomic forces</b>, using these reduced atomic graphs as inputs. The model learned how <b>local electronic environments</b> contribute to <b>system level properties</b> even when coordination is partially degraded.
+
+Within the <b>DFT workflow</b>, the reduced structure GNN served as a <b>screening model</b>. Instead of performing full <b>self consistent Kohn Sham calculations</b> for every large or defected configuration, I first evaluated reduced representations to estimate <b>local energy trends</b> and identify promising candidates. Only selected structures were passed to <b>high fidelity DFT evaluation</b>. Because structured reduction preserved the most predictive structural information, the surrogate maintained <b>strong agreement with full scale simulations</b> while <b>reducing the total number of expensive DFT calculations</b> required. This accelerated the study of <b>defected and truncated materials systems</b> while maintaining <b>physical consistency</b>.
+
+    </p>
+  </li>
+</ul>
+
+
+
                              <subsection class="resume-section" id="Modeling and Computational Science">
                             <div class="subheading mb-3">  Data Modeling and Simulations, DOE Grant </div>
-
-
-
-
-
-<p>
-  <ul>
-    <li>
-      <p>
-I designed and implemented a <b>Density Functional Theory simulation package</b> from scratch in <b>C++</b> to numerically solve the <b>Kohn Sham equations</b> in a fully self consistent workflow. I discretized the system on a <b>finite difference grid</b> and used <b>Eigen</b> to assemble the <b>sparse Hamiltonian</b>, then integrated <b>ARPACK++</b> to solve the eigenvalue problem inside a <b>self consistent field loop</b>. This produced a complete electronic structure engine, not a collection of isolated routines, with the numerics and data flow engineered for repeatable convergence and scientific use.
-
-I built the codebase around <b>clean modular design</b> and <b>physical correctness</b>. I used <b>Boost</b> in a targeted way to harden the implementation. <b>Boost Units</b> enforces dimensional consistency at compile time, preventing unit errors from ever reaching runtime, while <b>Boost Math</b> provides numerically stable special functions needed for accurate energies and potentials. This emphasis on correctness and safety made the framework easier to extend and far more reliable under parameter sweeps and large scale runs.
-
-For performance and scalability, I implemented a layered parallel strategy that maps naturally onto modern heterogeneous systems. I used <b>Kokkos</b> for performance portability across CPUs and GPUs, <b>TBB</b> for efficient data parallel execution, and standard <b>C plus plus concurrency</b> tools such as <b>std thread</b> and <b>std async</b> for fine grained task parallelism. The result is a <b>performance portable</b>, <b>physically rigorous</b>, and <b>production quality</b> DFT framework that combines modern <b>C++</b> software engineering with large scale electronic structure simulation capability.
-
-
-    </li>
-  </ul>
-</p>
-
-
-
-
-
 								 
-                            <p>
-								<ul>
-  <li><b>I introduced a novel method to model the electrolyte at the electrochemical interface using ab initio simulations of charge transfer processes at surfaces.</b> I presented a simple capacitor model of the interface that addresses key challenges, including: i) the requirement for large cell heights to achieve convergence, <b>which incurs significant computational costs</b>, and ii) the costly iterative calculations of reaction energetics needed to tune the surface charge to the desired potential. 
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
+<b>I introduced a novel method to model the electrolyte at the electrochemical interface using ab initio simulations of charge transfer processes at surfaces.</b> I presented a simple capacitor model of the interface that addresses key challenges, including: i) the requirement for large cell heights to achieve convergence, <b>which incurs significant computational costs</b>, and ii) the costly iterative calculations of reaction energetics needed to tune the surface charge to the desired potential. 
 
   I derived a correction to the energy for finite cell heights, enabling the calculation of large cell energies without additional computational expense. Furthermore, I demonstrated that reaction energetics determined at constant charge can be easily mapped to those at constant potential, eliminating the need for iterative schemes to tune the system to a constant potential. 
 
-  This work provided an efficient and accurate approach to modeling electrochemical interfaces.</li>
+  This work provided an efficient and accurate approach to modeling electrochemical interfaces.
+
+  </li>
 </ul>
 
-                            </p>
 
 
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
 
-                           <p>
-                                <ul>
-  <li> 
 In my recent research, I led a joint experimental and computational effort on the <b>Hydrogen Evolution Reaction</b>, a central process for <b>water splitting and clean energy conversion</b>, with a deliberate focus on neutral electrolyte conditions where the <b>Volmer step</b> is rate limiting and therefore sets the performance ceiling. We observed that <b>non metallic cations</b>, especially <b>ammonium</b> and <b>methylammonium</b>, produce a pronounced enhancement in HER activity on <b>Au(111)</b> relative to <b>sodium</b>, and I translated that observation into a mechanistic question that could be answered with first principles modeling. I implemented <b>Grand Canonical DFT</b> using the <b>TPOT</b> workflow with <b>VASP</b> and <b>VASPsol</b>, enabling electron count to adjust self consistently to maintain a constant electrode potential, and I built a realistic interfacial model using a <b>4 by 4 by 5 Au(111) slab</b> with <b>40 water molecules</b> to capture solvent structure and cation hydration. I then computed activation barriers with a <b>slow growth</b> approach and resolved the hydrogen adsorption landscape into two baseline pathways, adsorption driven by water dissociation inside the cation hydration shell and adsorption driven by bulk water outside it. Critically, in the presence of <b>ammonium</b> and <b>methylammonium</b> I identified two additional routes, <b>direct cation splitting</b> and <b>proton shuttling</b>, which are not available for conventional metal cations and which lower the barrier for hydrogen adsorption, directly accelerating the rate limiting step. The outcome is a clear, actionable mechanistic conclusion that <b>cation identity controls both pathway availability and barrier height</b>, and that non metallic cations can unlock proton transfer channels that materially improve HER kinetics, providing a concrete direction for designing electrolyte environments and interfaces that outperform traditional metal cation systems.
-</p>
 
-
-
+  </li>
 </ul>
-
-                            </p>
 
 
 
                 
-                            <p>
-								<ul>
-  <li><p>
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
 
 This project targets a central constraint in sustainable electrochemistry, how electrolyte composition and specifically <b>cation identity</b> controls the <b>electrochemical reduction of carbon dioxide</b> <b>CO<sub>2</sub>RR</b>. I focused on <b>Bi(111)</b>, a highly promising platform for CO<sub>2</sub> conversion, and I built a mechanistic picture of how <b>non metallic cations</b> reshape CO<sub>2</sub> adsorption, reaction energetics, and product selectivity for <b>CO</b> and <b>formate</b>. I designed and executed high fidelity simulations using <b>grand canonical density functional theory</b> with <b>TPOT</b> coupled to <b>VASP</b> and <b>VASPsol</b>, which allowed me to hold electrode potential fixed by dynamically optimizing electron count, isolating potential dependent effects in a controlled and reproducible way. I systematically compared <b>NH<sub>4</sub><sup>+</sup></b>, <b>CH<sub>3</sub>NH<sub>3</sub><sup>+</sup></b>, and <b>(CH<sub>3</sub>)<sub>4</sub>N<sup>+</sup></b> against <b>Na<sup>+</sup></b>, and I quantified CO<sub>2</sub> binding energetics, finding that non metallic cations can enhance CO<sub>2</sub> adsorption by up to <b>0.2 eV</b> relative to sodium through stronger electrostatic stabilization and more favorable interfacial charge redistribution. I then mapped the reaction landscape from adsorption through the key intermediates leading to CO and HCOO<sup>−</sup>, and resolved two distinct formate routes, direct hydrogenation of solvated CO<sub>2</sub> and surface adsorption followed by hydrogenation, with the solvated route emerging as energetically preferred and comparatively insensitive to cation identity, while CO formation showed strong sensitivity to cation hydration structure and interfacial proton delivery. To quantify hydrogen availability and transfer, I performed <b>nudged elastic band</b> calculations for water dissociation and hydrogen shuttling and obtained activation barriers near <b>1.10 to 1.12 eV</b> for Na<sup>+</sup> and NH<sub>4</sub><sup>+</sup>, establishing the kinetic cost of generating reactive hydrogen at the interface. Within that framework, I identified a specific advantage of <b>NH<sub>4</sub><sup>+</sup></b>, it stabilizes key intermediates through directional hydrogen bonding, improving intermediate persistence and lowering desorption barriers in the CO pathway, which directly supports enhanced CO<sub>2</sub>RR activity. The outcome is a coherent mechanistic model connecting cation chemistry to adsorption strength, barrier structure, and pathway selectivity, providing practical guidance for electrolyte and interface design aimed at carbon neutral fuel synthesis. This work supported experimental collaborations and contributed to <b>Department of Energy funding</b>, while establishing a foundation for future data driven modeling of electrochemical interfaces.
 
+  </li>
 </ul>
 
-                            </p>
                             
                             
-                            <p>
-								<ul>
-  <li><b>I studied and reported the effect of creating an interface between a semiconducting polyaniline polymer or a polar poly-D-lysine molecular film and one of two valence tautomeric complexes, i.e., [CoIII(SQ)(Cat)(4-CN-py)2] ↔ [CoII(SQ)2(4-CN-py)2] and [CoIII(SQ)(Cat)(3-tpp)2] ↔ [CoII(SQ)2(3-tpp)2].</b> I identified the electronic transitions and orbitals using X-ray photoemission, X-ray absorption, inverse photoemission, and optical absorption spectroscopy measurements, guided by density functional theory. 
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
+<b>I studied and reported the effect of creating an interface between a semiconducting polyaniline polymer or a polar poly-D-lysine molecular film and one of two valence tautomeric complexes, i.e., [CoIII(SQ)(Cat)(4-CN-py)2] ↔ [CoII(SQ)2(4-CN-py)2] and [CoIII(SQ)(Cat)(3-tpp)2] ↔ [CoII(SQ)2(3-tpp)2].</b> I identified the electronic transitions and orbitals using X-ray photoemission, X-ray absorption, inverse photoemission, and optical absorption spectroscopy measurements, guided by density functional theory. 
 
   My findings revealed that, except for slightly modified binding energies and shifted orbital levels, the choice of the underlying substrate layer had little effect on the electronic structure. Additionally, I observed a prominent unoccupied ligand-to-metal charge transfer state in [CoIII(SQ)(Cat)(3-tpp)2] ↔ [CoII(SQ)2(3-tpp)2], which remained virtually insensitive to the interface between the polymer and tautomeric complexes in the Co(II) high-spin state.
 
-  <b>This research led to the publication of a paper.</b></li>
-</ul>
+  <b>This research led to the publication of a paper.</b>
 
-                            </p>      
-                            <p>
-                            
-                            <ul>
-  <li>
+  </li>
+</ul>
+ 
+
+ 
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
     <b>I implemented and developed additional batches, debugged, and optimized codes used in computational material science, including VASP, VASPsol, and Quantum Espresso.</b> I performed, analyzed, and summarized validation simulations on <b>high-performance computing (HPC)</b> systems running <b>Linux</b>. 
 
     I worked extensively on the <b>creation, refinement, and advancement of application software and methods</b> designed for <b>analyzing and interpreting data</b> in the physical sciences. Over the course of four years, I actively contributed to the development and optimization of codes used in HPC environments, ensuring robust performance and accuracy for computational simulations.
+
   </li>
 </ul>
+
 
                             </p>
                             
@@ -446,35 +565,41 @@ This project targets a central constraint in sustainable electrochemistry, how e
                              <subsection class="resume-section" id="Teaching">
                             <div class="subheading mb-3">  Teaching - Consulting, UCF Funded </div>
                            
-                              <p>
-								<ul>
-  <li>
-    <b>I recently started coaching and supervising new graduate students to help them acclimate within the group and execute their research projects.</b> I provide <b>computational</b> support, assist with class selection, and engage in discussions with the advisor and senior group scientists to plan the future steps of their research. 
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
+<b>I recently started coaching and supervising new graduate students to help them acclimate within the group and execute their research projects.</b> I provide <b>computational</b> support, assist with class selection, and engage in discussions with the advisor and senior group scientists to plan the future steps of their research. 
 
     I stay up-to-date with new developments in <b>Computational Modeling</b> and proactively introduce these advancements to new graduate students. Additionally, I support senior scientists with grant proposals by contributing sections that describe the interplay between their research and <b>high-end computing resources</b>.
+
   </li>
 </ul>
 
-                            <p>
-								<ul>
-  <li>
+
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
     <b>I have served as a specialized physics lab instructor, focusing on <b>Machine Learning and Data Science.</b></b> I lead physics labs by incorporating comprehensive lessons on analyzing and applying simple <b>machine learning models</b>. I design and utilize <b>artificial data</b> derived from simulations I created, as well as real datasets from our laboratory, to provide engaging learning experiences.
 
     I demonstrate an effective integration of physics and data science, ensuring students gain a deeper understanding of how these disciplines intersect in modern research and applications.
+
   </li>
 </ul>
 
-                            </p>
-							<p>
-  <ul>
-    <li>
+							
+
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
       <b>I guided undergraduates in mastering the complexities of statistical data analysis,</b> 
       emphasizing the critical importance of data <b>preparation</b> for the effective application of machine learning algorithms. 
       I implemented <b>feature engineering techniques,</b> including meticulous data cleaning and transformation, 
       to enhance the quality and relevance of datasets, ensuring robust and meaningful analysis.
-    </li>
-  </ul>
-</p>
+
+  </li>
+</ul>
+
+
 
  </div>
         </div>
@@ -484,22 +609,30 @@ This project targets a central constraint in sustainable electrochemistry, how e
 
 <h3 class="mb-0">Research Assistant, National and Kapodistrian University of Athens</h3>
 <div class="subheading mb-3">NKUA Funded</div> 
+
+
 <ul>
-  <li>
+  <li style="text-align: justify; hyphens: auto;">
+
     Engaged in the cutting-edge development of a <b>sophisticated Machine Learning</b> approach for Dark Matter Particle Identification, 
     adeptly navigating the challenges posed by extremely low temperatures with unwavering precision and ingenious solutions. 
     The model accurately predicts the origin of dark matter from the LSP.
+
   </li>
 </ul>
 
+
 <ul>
-  <li>
+  <li style="text-align: justify; hyphens: auto;">
+
     Conducted immersive physics labs for undergraduates, delving into the complexities of <b>statistical data analysis</b> 
     and cultivating a deep understanding of the art of <b>data preparation</b> for the seamless application of 
     <b>advanced machine learning algorithms.</b> Simulations were developed by our simulation group, 
     providing us with a vast pool of <b>artificial data</b> for cleaning and training purposes.
+
   </li>
 </ul>
+
 
 
 <!-- </section>                
@@ -509,18 +642,27 @@ This project targets a central constraint in sustainable electrochemistry, how e
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Research Assistant, National and Kapodistrian University of Athens</h3>
                             <div class="subheading mb-3">  Deep Learning, NKUA Funded </div>
-                            <p>
-                                <ul>
-                                    <li> Engaged in the cutting-edge development of a <b>sophisticated Machine Learning</b> Approach for Dark Matter Particle Identification, adeptly navigating the challenges posed by extremely low temperatures with unwavering precision and ingenious solutions. The model accurately predicts the origin of dark matter from the LSP.
-                                    </ul>
-                            </p>
-                            <p>
-                                <ul>
-                              
-                                
- <li> Conducted immersive physics labs for undergraduates, delving into the intricacies of <b>statistical data analysis</b> and cultivating a deep understanding of the art of <b>data preparation</b> for the seamless application of <b>advanced machine learning algorithms.</b> Simulations were developed by our simulation group, providing us with a vast pool of <b>artificial data</b> for cleaning and training purposes
-                            </p>
-                </div>                
+
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+
+Engaged in the cutting-edge development of a <b>sophisticated Machine Learning</b> Approach for Dark Matter Particle Identification, adeptly navigating the challenges posed by extremely low temperatures with unwavering precision and ingenious solutions. The model accurately predicts the origin of dark matter from the LSP.
+
+  </li>
+</ul>
+
+
+
+
+
+<ul>
+  <li style="text-align: justify; hyphens: auto;">
+Conducted immersive physics labs for undergraduates, delving into the intricacies of <b>statistical data analysis</b> and cultivating a deep understanding of the art of <b>data preparation</b> for the seamless application of <b>advanced machine learning algorithms.</b> Simulations were developed by our simulation group, providing us with a vast pool of <b>artificial data</b> for cleaning and training purposes
+</li>
+</ul>
+
+
+</div>                
                 
 -->                                    
                                     
@@ -541,33 +683,50 @@ This project targets a central constraint in sustainable electrochemistry, how e
                             </p>
                             <div> Computational Physics </div>
                             <p>GPA: 4/4 
-								<p>
-This thesis develops a unified computational framework that integrates <strong>first-principles modeling</strong> with <strong>machine learning</strong> to address complex, multi-scale problems in <strong>energy conversion</strong>, <strong>materials growth</strong>, and <strong>graph-structured data</strong>. A central challenge across these domains is to extract reliable predictions from <strong>incomplete or computationally intensive datasets</strong> and apply them to <strong>larger, realistic systems</strong>. The research focuses on combining physical insight with scalable learning architectures to model atomic-level interactions, thin film growth, and data-limited environments.
+<div style="text-align: justify; hyphens: auto;">
+
+My doctoral research builds a unified computational framework centered on one guiding principle to <b>design machine learning systems that preserve governing physics while expanding computational scale</b>. Across <b>surface science</b>, <b>morphology prediction</b>, <b>microscopy analysis</b>, <b>electrochemistry</b>, and <b>graph learning</b>, the central challenge remained the same, <b>how to scale computation without losing the structural quantities that make predictions physically meaningful</b>.
+
+
+<p>
+The work begins with <b>epitaxial Pb growth on Ge(111)</b>, a critical problem in semiconductor fabrication. Experimentally, deposition transitions from a uniform wetting layer to island formation at a specific coverage that governs interface stability and device reliability. I established the physical baseline using <b>first-principles modeling</b>. Through <b>Density Functional Theory</b> with <b>DFT+U+J corrections</b>, I calibrated <b>Hubbard U</b> and <b>exchange J</b> parameters to reproduce the experimental <b>0.67 eV band gap</b> of germanium, ensuring accurate charge redistribution and bonding at the interface. From this calibrated electronic structure, I computed the <b>chemical potential</b> of Pb between <b>1.0 and 1.7 monolayers</b>, identifying a sharp transition at <b>1.33 monolayers</b> that marks the <b>onset of nucleation</b>.
 </p>
 
 <p>
-The work begins with an investigation into <strong>thin film nucleation in metal-semiconductor systems</strong>, specifically the epitaxial growth of <strong>Pb on Ge(111)</strong>. High-accuracy <strong>DFT+U+J</strong> calculations revealed a critical nucleation threshold at <strong>1.33 monolayers</strong>, beyond which island formation becomes energetically favorable. To extend this understanding to non-periodic, large-scale systems, a <strong>two-stage machine learning surrogate model</strong> was developed. One neural network predicted <strong>atomic charges</strong>, while another estimated <strong>total system energies</strong>, achieving results consistent with DFT and enabling efficient exploration of alloy deposition conditions.
+While DFT provided accuracy, it could not scale to realistic surface sizes. I therefore engineered a <b>machine learning surrogate explicitly constrained by chemical potential behavior</b>. An initial geometry-only model minimized average energy error but failed in the physically relevant metric: the chemical potential drifted with coverage. Residual analysis revealed missing <b>electrostatic physics</b>, specifically <b>charge transfer</b> and <b>coverage-dependent dipole formation</b>. I redesigned the framework into a <b>two-stage architecture</b> that first predicts <b>atomic charges</b> and then predicts <b>total energies</b> using both geometry and charge. The resulting energy residuals remained centered without coverage drift, and the reconstructed chemical potential curve reproduced nucleation at <b>1.33 monolayers</b> in agreement with DFT. The model preserved the <b>thermodynamic signal</b> while enabling simulations beyond first-principles scale.
 </p>
 
 <p>
-To visualize the structural outcomes of deposition, a <strong>3D convolutional neural network (CNN)</strong> was constructed to predict relaxed atomic positions from initial configurations. Using <strong>voxelized tensors</strong> encoding atom types, charges, and electrostatic potentials, the CNN learned spatial relationships governing final morphology. The model generated atomistic structures nearly indistinguishable from DFT-relaxed geometries, offering a <strong>fast, scalable alternative</strong> for simulating complex deposition processes.
+I then extended the framework to direct <b>morphology prediction</b>. A two-dimensional CNN baseline captured global structure but failed at island edges, where errors determine physical reliability. I implemented a <b>three-dimensional voxel CNN</b> that encodes local atomic environments and predicts <b>three-component atomic displacements</b>. Through disciplined architecture selection and regularization, I reduced the long error tail and achieved displacement accuracy on the order of <b>10⁻² Å</b>. I engineered a <b>sliding-window inference scheme</b> so each atom receives multiple contextual predictions, enabling consistent reconstruction across large surfaces. A <b>distributed data pipeline</b> generated hundreds of thousands of voxel tensors, and a <b>diffusion-based generative model</b> augmented underrepresented edge environments. The final system produces relaxed morphologies in minutes rather than days.
 </p>
 
 <p>
-Following this, the thesis explores how data from <strong>first-principles simulations</strong> can be further abstracted into <strong>graph representations</strong> to enable analysis under <strong>sparse conditions</strong>. In collaboration with the Departments of Physics and Statistics, a methodology was developed to encode atomic configurations or simulation domains as <strong>graphs</strong>, allowing truncated or reduced-node simulations. Using <strong>Simplified Graph Convolutional Networks (SGCs)</strong> implemented in Julia, the project introduced three node-reduction strategies and a <strong>parameter averaging technique</strong> to enhance robustness across sparsely observed graphs. Applied back to the full systems, this ensemble approach increased node classification accuracy from <strong>91% to 94%</strong>. Validated on the <strong>Cora citation network</strong> and <strong>Barabási–Albert synthetic graphs</strong>, the method demonstrated strong generalization performance and parallels the scalability challenges encountered in quantum modeling.
+To connect modeling with experiment, I built an automated segmentation pipeline for <b>scanning tunneling microscopy</b> images of Pb islands on Ge. Classical image processing proved unstable under background variation and island overlap. I transitioned to <b>deep learning instance segmentation</b>, first applying <b>Faster R-CNN</b> for detection and then <b>Mask R-CNN</b> for pixel-level segmentation. The model reliably separated adjacent islands and rejected artifacts. From these masks, I extracted quantitative morphology metrics, creating a reproducible bridge between STM data and atomistic modeling.
 </p>
 
 <p>
-The final section turns to <strong>sustainable electrochemical systems</strong>, focusing on the <strong>CO₂ reduction reaction (CO₂RR)</strong> and <strong>hydrogen evolution reaction (HER)</strong>. To simulate these reactions under constant electrode potential, two key tools were developed: a hybrid solvation model (<strong>SOLHYBRID</strong>) and a potential control algorithm (<strong>TPOT</strong>). These enabled <strong>grand-canonical DFT</strong> and <strong>AIMD</strong> simulations that uncovered how <strong>non-metallic ammonium cations</strong> like <strong>CH₃NH₃⁺</strong> enhance CO₂ adsorption and reduce the activation barrier for <strong>H* formation</strong> on <strong>bismuth electrodes</strong>. Experimental validation using <strong>H-cell</strong> and <strong>gas-diffusion electrodes (GDEs)</strong> confirmed that CH₃NH₃⁺ achieves <strong>nearly double the current density</strong> compared to Na⁺.
+I applied the same physics-aligned philosophy to <b>electrochemical time-series modeling</b>. <b>Chronoamperometry</b> and <b>cyclic voltammetry</b> signals exhibit memory, diffusion-driven relaxation, and hysteresis. I implemented <b>recurrent neural network architectures</b> and compared <b>LSTM</b>, <b>GRU</b>, and <b>Transformer self-attention models</b>. The <b>LSTM</b> architecture provided the most stable long-horizon predictions because its gating mechanism preserves sequential causality and multi-timescale behavior. Beyond accuracy, analysis of <b>hidden-state dynamics</b> revealed transitions between kinetic and diffusion-limited regimes, confirming physical interpretability.
 </p>
 
 <p>
-Simulations of <strong>HER on Au(111)</strong> surfaces revealed novel <strong>cation-mediated mechanisms</strong>, including <strong>proton shuttling</strong> and <strong>direct proton donation</strong>, that are inaccessible to traditional metallic cations. These pathways reduce energy barriers and establish ammonium-based species as <strong>active co-catalysts</strong> in electrochemical reactions.
+Finally, I initiated an interdisciplinary collaboration between the <b>Department of Physics</b> and the <b>Department of Statistics</b> to address <b>robustness in graph structured learning</b>. Missing nodes destabilize message passing and degrade classification performance. I implemented the <b>Simplified Graph Convolutional Network</b> in <b>Julia</b> and designed <b>structured node removal protocols</b> consisting of <b>truncation</b>, <b>random removal</b>, and <b>contiguous block removal</b>. After each reduction, I recomputed the <b>normalized adjacency operator</b> with self loops and degree normalization and applied <b>third order propagation</b> to retain higher order structure. By training models on slightly different reduced graphs and <b>averaging learned parameters</b>, I improved <b>stability under structured perturbation</b>. On the <b>Cora benchmark</b>, accuracy improved from about <b>91 percent to as high as 94 percent</b> when transferring the aggregated model back to the full graph. I validated scaling behavior on synthetic networks generated using the <b>Barabasi Albert model</b>.
 </p>
 
 <p>
-Together, these studies demonstrate how <strong>machine learning can extend the reach of first-principles simulations</strong>, from predicting atomic configurations to learning from incomplete data. By unifying techniques across <strong>surface science</strong>, <strong>electrochemistry</strong>, and <strong>graph theory</strong>, this work provides scalable, physically grounded models that support the design of next-generation materials, interfaces, and sustainable energy technologies.
+I then connected this <b>structured reduction framework</b> directly to <b>density functional theory based materials modeling</b>. Each <b>DFT relaxed atomic configuration</b> was converted into a <b>graph representation</b> where atoms are nodes and edges were defined using <b>physically motivated distance cutoffs</b> consistent with electronic structure neighbor lists. Node features encoded <b>atomic identity</b> and <b>local geometric descriptors</b> derived from relaxed positions. I applied <b>clustered removals</b> and <b>surface like truncations</b> to emulate vacancies and finite size effects. The <b>graph neural network</b> was trained on <b>DFT derived local energies and atomic forces</b> so that it learned the <b>electronic response to controlled structural degradation</b>.
 </p>
+
+<p>
+Within the <b>electronic structure workflow</b>, the trained model functioned as a <b>screening layer</b>. Reduced graphs were evaluated first to estimate <b>energy trends</b> and <b>force distributions</b>, and only selected configurations advanced to full <b>self consistent Kohn Sham calculations</b>. Because the reduction strategy preserved <b>meaningful coordination patterns</b>, the graph model maintained <b>strong agreement with DFT</b> while <b>decreasing the number of expensive first principles evaluations</b> required.
+</p>
+
+<p>
+Across all projects, the unifying contribution is <b>structural preservation</b>. In each domain, I identified the governing physical quantity such as <b>chemical potential</b>, <b>morphology stability</b>, <b>temporal memory</b>, or <b>graph connectivity</b>. I then designed <b>machine learning systems that protect that structure</b> rather than optimize only numerical averages. The result is a coherent set of <b>scalable and interpretable computational frameworks</b> that extend <b>first principles modeling</b> to realistic scales while remaining anchored in <b>physical law</b>.
+</p>
+
+
+</div>
+
 
                             </p>
                         </div>
@@ -580,6 +739,10 @@ Together, these studies demonstrate how <strong>machine learning can extend the 
                             </p>
                             Computational Physics
                             <p>Grade: 9.2/10 
+
+
+<div style="text-align: justify; hyphens: auto;">
+
 <p> For my master’s research, I integrated <b>Deep Learning methodologies to unravel the mysteries of supersymmetry and dark matter</b>. While the Standard Model is foundational to modern particle physics, it falls short in addressing the <b>hierarchy problem</b>—the disparity between electroweak and gravitational forces. <b>Supersymmetry</b>, a hypothetical extension of the Standard Model, offers a compelling solution to this problem. At the core of my research is the exploration of the <b>Lightest Supersymmetric Particle (LSP)</b>, a theoretical entity with profound implications for <b>dark matter</b>.
 
 <b>Employing advanced deep learning techniques</b>, I calculated the <b>cross-section for the scattering of dark matter particles from ordinary matter</b>, shedding light on the elusive nature of dark matter. My investigation spanned both <b>direct and indirect detection methods</b>, where I performed a thorough analysis of experimental setups and conducted <b>rigorous comparisons between theoretical predictions and astronomical observations</b>. Using <b>data science methodologies</b>, I validated the robustness of my model, ensuring it aligned with real-world data.
@@ -589,7 +752,11 @@ In the domain of <b>direct dark matter detection</b>, I <b>developed and trained
 My research also extended into <b>indirect detection methods</b>, including the study of <b>annihilated dark matter particles</b> and the detection of <b>neutrinos and photons</b>. In this context, I built and deployed another <b>neural network</b> that was instrumental in <b>confirming the exclusive origins of neutrinos from specific particle interactions</b>. These networks became central to my work, serving as <b>critical tools within a broader data science framework</b>, used to refine and test theoretical models against real-world cosmic data.
 
 Ultimately, my work led to a <b>comprehensive understanding of the interplay between supersymmetry and dark matter</b>, with <b>data science emerging as the key enabler</b> in decoding these cosmic mysteries.</p>
-                            </p>
+
+</div>
+
+
+
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">October 2017 - May 2019 </span></div>
                     </div>
@@ -599,9 +766,18 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                             <p class="lead mb-0">Bachelor's degree</p>
                             </p>
                             <p>Physics</p>
-                            <p>
-                             My undergraduate thesis was grounded in a published research paper produced by a team of researchers, which I thoroughly studied, reproduced, and restructured into an original and comprehensive presentation. Building on that foundation, I conducted an in-depth investigation into the <b>decomposition reactions of the neutral pion (&pi;<sup>0</sup>)</b>, analyzing not only the different decay channels but also the <b>probabilities associated with each reaction pathway</b>. As part of my research, I undertook a detailed study of the <b>Tevatron accelerator</b> and its <b>trace detection systems</b>, including the <b>CDF (Collider Detector at Fermilab)</b>, <b>SVXII</b>, <b>ISL (Intermediate Silicon Layers)</b>, and <b>COT (Central Outer Tracker)</b>. These detectors are designed to trace the trajectories of charged particles, and I focused on their structure and operational dynamics. I also examined the <b>&gamma; &rarr; e<sup>-</sup> e<sup>+</sup></b> conversion process within the Tevatron, aiming to minimize uncertainty in the <b>initial conversion probability</b>. To accomplish this, I developed an <b>algorithm</b> that enabled the <b>reconstruction of the &pi;<sup>0</sup> mass</b> by combining four distinct particle trajectories. This reconstruction allowed me to determine the <b>cleavage position of the &pi;<sup>0</sup></b>. I further explored the feasibility of using <b>spatial variables</b> in analyzing &pi;<sup>0</sup> decay modes, including both <b>normal and Dalitz decays</b>, while deeply examining their <b>topologies</b>. Throughout this process, I identified and defined the most effective spatial variables, <b>firstpoint</b> and <b>minpoint</b>, as critical features in my analysis. Here, the <b>Monte Carlo technique</b> played a pivotal role in simulating and validating my results. Finally, using the resulting decay topology diagrams, I was able to <b>identify and distinguish the ISL, COT, and SVXII detectors</b>, effectively linking theory, simulation, and detector response.
-                            </p>
+
+
+<div style="text-align: justify; hyphens: auto;">
+
+<p>
+My undergraduate thesis was grounded in a published research paper produced by a team of researchers, which I thoroughly studied, reproduced, and restructured into an original and comprehensive presentation. Building on that foundation, I conducted an in-depth investigation into the <b>decomposition reactions of the neutral pion (&pi;<sup>0</sup>)</b>, analyzing not only the different decay channels but also the <b>probabilities associated with each reaction pathway</b>. As part of my research, I undertook a detailed study of the <b>Tevatron accelerator</b> and its <b>trace detection systems</b>, including the <b>CDF (Collider Detector at Fermilab)</b>, <b>SVXII</b>, <b>ISL (Intermediate Silicon Layers)</b>, and <b>COT (Central Outer Tracker)</b>. These detectors are designed to trace the trajectories of charged particles, and I focused on their structure and operational dynamics. I also examined the <b>&gamma; &rarr; e<sup>-</sup> e<sup>+</sup></b> conversion process within the Tevatron, aiming to minimize uncertainty in the <b>initial conversion probability</b>. To accomplish this, I developed an <b>algorithm</b> that enabled the <b>reconstruction of the &pi;<sup>0</sup> mass</b> by combining four distinct particle trajectories. This reconstruction allowed me to determine the <b>cleavage position of the &pi;<sup>0</sup></b>. I further explored the feasibility of using <b>spatial variables</b> in analyzing &pi;<sup>0</sup> decay modes, including both <b>normal and Dalitz decays</b>, while deeply examining their <b>topologies</b>. Throughout this process, I identified and defined the most effective spatial variables, <b>firstpoint</b> and <b>minpoint</b>, as critical features in my analysis. Here, the <b>Monte Carlo technique</b> played a pivotal role in simulating and validating my results. Finally, using the resulting decay topology diagrams, I was able to <b>identify and distinguish the ISL, COT, and SVXII detectors</b>, effectively linking theory, simulation, and detector response.
+</p>
+
+</div>
+
+
+
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">October 2011 - May 2017</span></div>
                     </div>
@@ -623,7 +799,12 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                         <p>   
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Expertise in <b>material simulation</b> through the use of <b>ab initio Density Functional Theory (DFT)</b> and <b>molecular dynamics</b>, leveraging programming languages like <b>Python, Julia and C++</b> for algorithm development. Instrumental in achieving <b>accurate modeling</b> and forecasting of materials at the atomic and molecular levels.
+                            <div style="text-align: justify; hyphens: auto;">
+
+Expertise in <b>material simulation</b> through the use of <b>ab initio Density Functional Theory (DFT)</b> and <b>molecular dynamics</b>, leveraging programming languages like <b>Python, Julia and C++</b> for algorithm development. Instrumental in achieving <b>accurate modeling</b> and forecasting of materials at the atomic and molecular levels.
+
+</div>
+
                        </p> 
                         <p>
                          <li>
@@ -631,12 +812,22 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                         
                         
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                           Demonstrated adeptness in <b>utilizing and recompiling VASP, VASPsol, and Quantum Espresso</b> software packages for pioneering <b>material design.</b> Deep proficiency in <b>parallel programming</b> for the efficient utilization of <b>high-performance computing (HPC)</b> resources in <b>automation and</b> workflow <b>optimization.</b> E
+                           <div style="text-align: justify; hyphens: auto;">
+
+Demonstrated adeptness in <b>utilizing and recompiling VASP, VASPsol, and Quantum Espresso</b> software packages for pioneering <b>material design.</b> Deep proficiency in <b>parallel programming</b> for the efficient utilization of <b>high-performance computing (HPC)</b> resources in <b>automation and</b> workflow <b>optimization.</b> 
+
+</div>
+
                         <p/>                        
                            <li>
                          
                           <span class="fa-li"><i class="fas fa-check"></i></span>
-                          Exhibiting expertise in applying <b>deep learning techniques to materials science problems</b> for materials discovery and <b>property prediction,</b> along with a background in <b>developing optimization algorithms for materials discovery.</b> Proficient in <b>implementing and enhancing</b> numerical <b>algorithms for simulations.</b>
+                          <div style="text-align: justify; hyphens: auto;">
+
+Exhibiting expertise in applying <b>deep learning techniques to materials science problems</b> for materials discovery and <b>property prediction,</b> along with a background in <b>developing optimization algorithms for materials discovery.</b> Proficient in <b>implementing and enhancing</b> numerical <b>algorithms for simulations.</b>
+
+</div>
+
                         <p/>
                         
                         
@@ -651,7 +842,12 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                         <li>
                         
                                                   <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Outstanding <b>collaborative skills with experimentalists and fellow researchers</b> in interdisciplinary projects. Demonstrated proficiency in <b>integrating theoretical data with experimental results,</b> adeptly proposing experiment designs, and <b>crafting grant proposals</b> for funding. Remarkable communication skills in presenting complex computational concepts to non-experts.
+                           <div style="text-align: justify; hyphens: auto;">
+
+Outstanding <b>collaborative skills with experimentalists and fellow researchers</b> in interdisciplinary projects. Demonstrated proficiency in <b>integrating theoretical data with experimental results,</b> adeptly proposing experiment designs, and <b>crafting grant proposals</b> for funding. Remarkable communication skills in presenting complex computational concepts to non-experts.
+
+</div>
+
                         <p/>
                         
                         
@@ -669,33 +865,63 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                         <p>   
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Demonstrated excellence in both <b> Python and R,</b> advanced <b>coding and data analysis skills</b> have been consistently applied to extract valuable insights from intricate datasets. The proficiency in these languages extends to a deep understanding of their capabilities, allowing for effective manipulation and analysis of complex data.
+                            <div style="text-align: justify; hyphens: auto;">
+
+ Demonstrated excellence in both <b> Python and R,</b> advanced <b>coding and data analysis skills</b> have been consistently applied to extract valuable insights from intricate datasets. The proficiency in these languages extends to a deep understanding of their capabilities, allowing for effective manipulation and analysis of complex data.
+
+</div>
+
                         </p> 
                         <p>
                          <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                           Proficient in <b>optimizing and recompiling C/C++ software,</b> applying specialized skills to enhance performance tailored to specific research and computational requirements. This proficiency allows for the fine-tuning and customization of applications, ensuring optimal performance alignment with precise research and computational demands.
+                           <div style="text-align: justify; hyphens: auto;">
+
+Proficient in <b>optimizing and recompiling C/C++ software,</b> applying specialized skills to enhance performance tailored to specific research and computational requirements. This proficiency allows for the fine-tuning and customization of applications, ensuring optimal performance alignment with precise research and computational demands.
+
+</div>
+
                         </p>
                         <p>
                          <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Skilled in the application of <b>linear regression and Support Vector Machines (SVM)</b> to elevate decision-making processes and optimize strategies within the framework of <b>reinforcement learning</b>
+                            <div style="text-align: justify; hyphens: auto;">
+
+Skilled in the application of <b>linear regression and Support Vector Machines (SVM)</b> to elevate decision-making processes and optimize strategies within the framework of <b>reinforcement learning</b>
+
+</div>
+
                         <p/>
                         <p>
                          <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Exhibited expertise in the <b>training and testing of Neural Networks</b> within the realm of <b>deep learning,</b> contributing to the augmentation of data modeling and <b>fostering well-informed decision-making.</b>
+                            <div style="text-align: justify; hyphens: auto;">
+
+Exhibited expertise in the <b>training and testing of Neural Networks</b> within the realm of <b>deep learning,</b> contributing to the augmentation of data modeling and <b>fostering well-informed decision-making.</b>
+
+</div>
+
                         <p/>
                         <p>
                          <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Skilled in the effective utilization of <b>ARIMA and SARIMA </b> models, contributing to the analysis and accurate forecasting of temporal data patterns. This proficiency supports well-informed <b>decision-making</b> in dynamic environments
+                            <div style="text-align: justify; hyphens: auto;">
+
+Skilled in the effective utilization of <b>ARIMA and SARIMA </b> models, contributing to the analysis and accurate forecasting of temporal data patterns. This proficiency supports well-informed <b>decision-making</b> in dynamic environments
+
+</div>
+
                         <p/>   
                         
                         <p>
                          <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Demonstrated expertise in <b>data analytics</b> through numerous Ph.D. projects, adeptly extracting insights, making <b>data-driven decisions, and delivering meaningful solutions.</b>
+                            <div style="text-align: justify; hyphens: auto;">
+
+Demonstrated expertise in <b>data analytics</b> through numerous Ph.D. projects, adeptly extracting insights, making <b>data-driven decisions, and delivering meaningful solutions.</b>
+
+</div>
+
 
                         <p/>  
                         
@@ -823,27 +1049,52 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                         <p>   
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Successfully <b>oversees projects with minimal supervision,</b> ensuring strict adherence to budgetary constraints and <b>achieving timely completion within specified deadlines.</b> Adeptly <b>generates comprehensive reports and derives meaningful conclusions</b> from meticulous data analysis.
+                            <div style="text-align: justify; hyphens: auto;">
+
+Successfully <b>oversees projects with minimal supervision,</b> ensuring strict adherence to budgetary constraints and <b>achieving timely completion within specified deadlines.</b> Adeptly <b>generates comprehensive reports and derives meaningful conclusions</b> from meticulous data analysis.
+
+</div>
+
                         </p> 
                         <p>
                          <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                           <b>Establishes</b> and nurtures <b>effective relationships,</b> seamlessly collaborating within <b>diverse teams</b> and serving as an <b>enthusiastic motivator</b> to foster a positive and cohesive working environment.
+                           <div style="text-align: justify; hyphens: auto;">
+
+<b>Establishes</b> and nurtures <b>effective relationships,</b> seamlessly collaborating within <b>diverse teams</b> and serving as an <b>enthusiastic motivator</b> to foster a positive and cohesive working environment.
+
+</div>
+
                         </p>
                         <p>
                          <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            <b>Effectively communicates</b> intricate concepts to both <b>specialist and general audiences,</b> demonstrating a remarkable capacity to <b>convey complex information in a clear and understandable manner.</b>
+                            <div style="text-align: justify; hyphens: auto;">
+
+<b>Effectively communicates</b> intricate concepts to both <b>specialist and general audiences,</b> demonstrating a remarkable capacity to <b>convey complex information in a clear and understandable manner.</b>
+
+</div>
+
                         <p/>
                         <p>
                          <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Exhibits <b>adaptability and responsive management</b> in dynamic and rapidly changing environments.
+                            <div style="text-align: justify; hyphens: auto;">
+
+Exhibits <b>adaptability and responsive management</b> in dynamic and rapidly changing environments.
+
+</div>
+
                         <p/>
                         <p>
                          <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            An avid and <b>dedicated learner,</b> showcasing <b>exceptional verbal and written communication abilities.</b>
+                            <div style="text-align: justify; hyphens: auto;">
+
+An avid and <b>dedicated learner,</b> showcasing <b>exceptional verbal and written communication abilities.</b>
+
+</div>
+
                         <p/>
                 </div>
                              
@@ -861,7 +1112,7 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                             Peer Tutoring Award
                         </p> 
-                         <div class="flex-shrink-0"><span class="text-primary">Summer 2019 - Present </span></div>
+                         <div class="flex-shrink-0"><span class="text-primary">Summer 2019 - Fall 2025</span></div>
                         <p>   
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                             Research & Teaching Assistant Fellowship
@@ -931,13 +1182,18 @@ Ultimately, my work led to a <b>comprehensive understanding of the interplay bet
                  <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p>As an engineer by day and a dedicated technologist by night, I integrate a deep-rooted passion for innovation with a strong commitment to technical excellence. The world of software development is more than just a profession, it is where I find clarity, creativity, and inspiration.</p>
+                    <div style="text-align: justify; hyphens: auto;">
+
+<p>As an engineer by day and a dedicated technologist by night, I integrate a deep-rooted passion for innovation with a strong commitment to technical excellence. The world of software development is more than just a profession, it is where I find clarity, creativity, and inspiration.</p>
 
 <p>With a Ph.D. in computational modeling and a strong foundation in coding, I continually explore the latest advancements in web development frameworks and front-end technologies. My goal is to not only stay ahead of the curve but to contribute meaningfully to the ever-evolving landscape of digital innovation.</p>
 
 <p>Beyond my professional role, my enthusiasm for technology extends into a diverse array of personal projects and intellectual pursuits. Whether tackling complex coding challenges, experimenting with emerging programming languages, or building digital solutions, I am constantly driven by curiosity and a desire to grow.</p>
 
 <p>Technology is the common thread that runs through all aspects of my life. It shapes my mindset, informs my approach, and inspires my continuous journey of learning, problem-solving, and creative exploration.</p>
+
+</div>
+
 
                 </div>
                 
